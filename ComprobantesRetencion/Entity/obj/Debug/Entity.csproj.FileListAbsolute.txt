@@ -7,3 +7,6 @@ C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Entity\bin\Debu
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Entity\obj\Debug\Entity.dll
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Entity\obj\Debug\Entity.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Entity\obj\Debug\Entity.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Entity\obj\Debug\Entity.pdb

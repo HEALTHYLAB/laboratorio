@@ -345,12 +345,12 @@
                                 <i class="fa fa-th-large"></i>Generar Solicitud de Transfusión de Emergencia
                             </a>
                             </li>
-                            <li><a href="/VisarSolicitudTransfusion.aspx">
-                                <i class="fa fa-bar-chart"></i>Visar Solicitud 
-                            </a>
-                            </li>
                             <li><a href="/transfusion/FrmListaSolicitudTransfusion.aspx">
                                 <i class="fa fa-table"></i>Transfusiones
+                            </a>
+                            </li>
+                         <li><a href="/transfusion/FrmListaVisarSolicitudTransfusion.aspx">
+                                <i class="fa fa-table"></i>Visar Solicitud
                             </a>
                             </li>
                             <li><a href="/transfusion/ListarSolicitudTransfusionExterna.aspx">

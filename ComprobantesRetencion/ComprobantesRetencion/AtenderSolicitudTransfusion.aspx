@@ -458,7 +458,7 @@
                         <div class="brand">Clínica Ricardo Palma</div>
                     </div>
                     <nav class="menu">
-                         <ul class="nav metismenu" id="sidebar-menu">
+                   <ul class="nav metismenu" id="sidebar-menu">
                             <li><a href="/GenerarSolicitudTransfusion.aspx">
                                 <i class="fa fa-home"></i>Generar Solicitud de Transfusión
                             </a>
@@ -467,12 +467,12 @@
                                 <i class="fa fa-th-large"></i>Generar Solicitud de Transfusión de Emergencia
                             </a>
                             </li>
-                            <li><a href="/VisarSolicitudTransfusion.aspx">
-                                <i class="fa fa-bar-chart"></i>Visar Solicitud 
-                            </a>
-                            </li>
                             <li><a href="/transfusion/FrmListaSolicitudTransfusion.aspx">
                                 <i class="fa fa-table"></i>Transfusiones
+                            </a>
+                            </li>
+                         <li><a href="/transfusion/FrmListaVisarSolicitudTransfusion.aspx">
+                                <i class="fa fa-table"></i>Visar Solicitud
                             </a>
                             </li>
                             <li><a href="/transfusion/ListarSolicitudTransfusionExterna.aspx">
@@ -483,7 +483,7 @@
                                 <i class="fa fa-table"></i>Reportes
                             </a>
                             </li>
-                             </ul>
+                        </ul>
                     </nav>
                 </div>
                 <footer class="sidebar-footer">

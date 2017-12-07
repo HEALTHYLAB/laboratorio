@@ -21,3 +21,5 @@ C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRet
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll

@@ -12,3 +12,5 @@ C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\DAO\bin\Debug\E
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\DAO\obj\Debug\DAO.dll
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\DAO\obj\Debug\DAO.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\DAO\obj\Debug\DAO.dll
