@@ -1,0 +1,7 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\bin\Debug\DAO.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\bin\Debug\DAO.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\bin\Debug\Entity.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\bin\Debug\Entity.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\obj\Debug\DAO.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\DAO\obj\Debug\DAO.pdb

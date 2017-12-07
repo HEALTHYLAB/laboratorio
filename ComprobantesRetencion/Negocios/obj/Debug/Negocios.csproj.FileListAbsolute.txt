@@ -1,0 +1,9 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\Negocios.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\Negocios.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\DAO.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\Entity.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\DAO.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\bin\Debug\Entity.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\obj\Debug\Negocios.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Negocios\obj\Debug\Negocios.pdb

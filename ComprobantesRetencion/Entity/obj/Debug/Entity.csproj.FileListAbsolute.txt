@@ -1,0 +1,4 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Entity\bin\Debug\Entity.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Entity\bin\Debug\Entity.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Entity\obj\Debug\Entity.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\Entity\obj\Debug\Entity.pdb

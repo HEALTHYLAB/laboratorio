@@ -1,0 +1,5 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\UnitTestProject\bin\Debug\UnitTestProject.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\UnitTestProject\bin\Debug\UnitTestProject.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\UnitTestProject\obj\Debug\UnitTestProject.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\UnitTestProject\obj\Debug\UnitTestProject.pdb

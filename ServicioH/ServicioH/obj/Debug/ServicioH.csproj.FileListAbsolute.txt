@@ -1,0 +1,6 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\bin\Debug\ServicioH.exe.config
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\bin\Debug\ServicioH.exe
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\bin\Debug\ServicioH.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\obj\Debug\ServicioH.csprojResolveAssemblyReference.cache
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\obj\Debug\ServicioH.exe
+E:\27_UPC\9noCiclo\Taller Proyecto 2\Servicio\ServicioH\ServicioH\obj\Debug\ServicioH.pdb

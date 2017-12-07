@@ -1,0 +1,11 @@
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.pdb
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll
+E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb
