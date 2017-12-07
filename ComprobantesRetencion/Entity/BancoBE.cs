@@ -8,7 +8,7 @@ namespace Entity
 {
     public class BancoBE
     {
-        public int id { get; set; }
+        public int codigo { get; set; }
         public string descripcion { get; set; }
     }
 }

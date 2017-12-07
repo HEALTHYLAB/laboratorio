@@ -51,16 +51,16 @@ namespace ComprobantesRetencion.transfusion
 
 
             OrdenDonacionBE o = new OrdenDonacionBE();
-            o.Estado = 2;//PENDIENTE
-            o.Observacion = arreglo[0];
+            o.estado = 2;//PENDIENTE
+            o.observacion = arreglo[0];
 
             List<HemocomponenteSolicitudBE> obj = new List<HemocomponenteSolicitudBE>();
             for (int i = 0; i < arregloDetalle.Length; i++)
             {
                 HemocomponenteSolicitudBE hemoObjt = new HemocomponenteSolicitudBE();
                 string[] arreglo2 = arregloDetalle[i].Split('|');
-                hemoObjt.idHemocomponente = arreglo2[0];
-                hemoObjt.idSolicitud = "1";//TODO
+                hemoObjt.codHemocomponente = arreglo2[0];
+                hemoObjt.codSolicitud = "1";//TODO
                 obj.Add(hemoObjt);
             }
 

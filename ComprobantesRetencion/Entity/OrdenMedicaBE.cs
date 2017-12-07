@@ -9,13 +9,13 @@ namespace Entity
     public class OrdenMedicaBE
     {
 
-        public int idOrden { get; set; }
+        public int codOrden { get; set; }
 
         public string codigoOrden { get; set; }
-        public int idPaciente { get; set; }
-        public string Paciente { get; set; } 
+        public int codPaciente { get; set; }
+        public string paciente { get; set; } 
         public string fecha { get; set; }
-        public int Estado { get; set; }
+        public int estado { get; set; }
 
         public int edad { get; set; }
         public int peso { get; set; }

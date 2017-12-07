@@ -8,8 +8,8 @@ namespace Entity
 {
     public class TecnicoBE
     {
-        public int IdTecnico;
-        public string Nombre;
-        public int Estado;
+        public int codTecnico;
+        public string nombre;
+        public int estado;
     }
 }

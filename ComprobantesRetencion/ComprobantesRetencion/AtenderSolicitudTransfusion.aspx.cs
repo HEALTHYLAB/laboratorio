@@ -62,8 +62,8 @@ namespace ComprobantesRetencion
 
 
             OrdenDonacionBE o = new OrdenDonacionBE();
-            o.Estado = 2;//PENDIENTE
-            o.Observacion = arreglo[0];
+            o.estado = 2;//PENDIENTE
+            o.observacion = arreglo[0];
 
             //string[] arreglo2 = arregloDetalle[i].Split('|');
             //o.NroOrden = arreglo2[0];
@@ -73,8 +73,8 @@ namespace ComprobantesRetencion
             {
                 HemocomponenteSolicitudBE hemoObjt = new HemocomponenteSolicitudBE();
                 string[] arreglo2 = arregloDetalle[i].Split('|');
-                hemoObjt.idHemocomponente = arreglo2[0];
-                hemoObjt.idSolicitud = "1";//TODO
+                hemoObjt.codHemocomponente = arreglo2[0];
+                hemoObjt.codSolicitud = "1";//TODO
                 obj.Add(hemoObjt);
             }
 
@@ -137,10 +137,10 @@ namespace ComprobantesRetencion
             {
                 HemocomponenteSolicitudBE o = new HemocomponenteSolicitudBE();
                 string[] arreglo2 = arreglodetalle[i].Split('|');
-                oSolicitudTransfusionBE.idSolicitud = Convert.ToInt32(arreglo2[3].ToString());
-                o.idHemocomponente = arreglo2[1];
-                o.NroSerieUnidad = arreglo2[4];
-                o.idSolicitud = arreglo2[3].ToString();
+                oSolicitudTransfusionBE.codSolicitud = Convert.ToInt32(arreglo2[3].ToString());
+                o.codHemocomponente = arreglo2[1];
+                o.nroSerieUnidad = arreglo2[4];
+                o.codSolicitud = arreglo2[3].ToString();
                 oListaHemocomponenteSolicitudBE.Add(o);
      
             }

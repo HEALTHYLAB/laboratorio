@@ -39,9 +39,9 @@ namespace ComprobantesRetencion
 
                     if (isApproved == 1)
                     {
-                        item.DesEstado = "Aprobado";
+                        item.desEstado = "Aprobado";
                     }
-                    else { item.DesEstado = "Pendiente de Aprobación"; }
+                    else { item.desEstado = "Pendiente de Aprobación"; }
                 }
             }
             return oListaSolicitudTransfusionBE;

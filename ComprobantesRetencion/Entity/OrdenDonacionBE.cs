@@ -9,17 +9,17 @@ namespace Entity
     [Serializable]
     public class OrdenDonacionBE
     {
-        public int idOrdenDonacion { get; set; }
-        public string NroOrden { get; set; }
-        public string NroSolicitudTransfusion { get; set; }
-        public int Estado { get; set; }
-        public string FechaRegistro { get; set; }
-        public string UsuarioRegistro { get; set; }
-        public string FechaModificacion { get; set; }
-        public string UsuarioModificacion { get; set; }
-        public string FechaRechazo { get; set; }
-        public string UsuarioRechazo { get; set; }
-        public string Observacion { get; set; }
+        public int codOrdenDonacion { get; set; }
+        public string nroOrden { get; set; }
+        public string nroSolicitudTransfusion { get; set; }
+        public int estado { get; set; }
+        public string fechaRegistro { get; set; }
+        public string usuarioRegistro { get; set; }
+        public string fechaModificacion { get; set; }
+        public string usuarioModificacion { get; set; }
+        public string fechaRechazo { get; set; }
+        public string usuarioRechazo { get; set; }
+        public string observacion { get; set; }
 
     }
 }

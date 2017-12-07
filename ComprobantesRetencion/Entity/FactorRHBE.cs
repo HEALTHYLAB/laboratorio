@@ -9,11 +9,11 @@ namespace Entity
     [Serializable]
     public class FactorRHBE
     {
-        public string Codigo { get; set; }
-        public string Descripcion { get; set; }
-        public string FechaRegistro { get; set; }
-        public string UsuarioRegistro { get; set; }
-        public string FechaModificacion { get; set; }
-        public string UsuarioModificacion { get; set; }
+        public string codigo { get; set; }
+        public string descripcion { get; set; }
+        public string fechaRegistro { get; set; }
+        public string usuarioRegistro { get; set; }
+        public string fechaModificacion { get; set; }
+        public string usuarioModificacion { get; set; }
     }
 }

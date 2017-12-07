@@ -9,21 +9,21 @@ namespace Entity
     [Serializable]
     public class ResultadoPaciente
     {
-        public int Id_ResultadoAC { get; set; }
-        public string Tipo_Analisis { get; set; }
-        public string Mes { get; set; }
-        public string Anio { get; set; }
-        public string Fecha_Emision { get; set; }
-        public string Valor_Optimo_Inicial { get; set; }
-        public string Valor_Optimo_Final { get; set; }
-        public string Tipo_Medida { get; set; }
-        public string Resultado { get; set; }
-        public string Medico_Solicitante { get; set; }
-        public string Fecha_Solicitud { get; set; }
-        public int Id_Estado { get; set; }
-        public int Id_Paciente { get; set; }
-        public string Paciente { get; set; }
-        public string Id_Tipo_Analisis { get; set; }
-        public string Valor_Optimo { get; set; }
+        public int codResultadoAC { get; set; }
+        public string tipoAnalisis { get; set; }
+        public string mes { get; set; }
+        public string anio { get; set; }
+        public string fechaEmision { get; set; }
+        public string valorOptimoInicial { get; set; }
+        public string valorOptimoFinal { get; set; }
+        public string tipoMedida { get; set; }
+        public string resultado { get; set; }
+        public string medicoSolicitante { get; set; }
+        public string fechaSolicitud { get; set; }
+        public int codEstado { get; set; }
+        public int codPaciente { get; set; }
+        public string paciente { get; set; }
+        public string codTipoAnalisis { get; set; }
+        public string valorOptimo { get; set; }
     }
 }

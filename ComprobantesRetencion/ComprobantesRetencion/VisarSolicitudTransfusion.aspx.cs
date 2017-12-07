@@ -73,11 +73,11 @@ namespace ComprobantesRetencion
             List<DetalleSolicitudTranfusion> oListaDetalleSolicitudTranfusion = new List<DetalleSolicitudTranfusion>();
           string[] arreglo = xdata.Split('|');
       
-             oSolicitudTransfusionBE.idSolicitud = Convert.ToInt32( arreglo[0]);
+             oSolicitudTransfusionBE.codSolicitud = Convert.ToInt32( arreglo[0]);
              oSolicitudTransfusionBE.estado = Convert.ToInt32( arreglo[1]);
              oSolicitudTransfusionBE.motivo =  arreglo[2];
-             oSolicitudTransfusionBE.idOrdenMedica = Convert.ToInt32( arreglo[3]);
-             oSolicitudTransfusionBE.idtecnico = Convert.ToInt32( arreglo[4]);
+             oSolicitudTransfusionBE.codOrdenMedica = Convert.ToInt32( arreglo[3]);
+             oSolicitudTransfusionBE.codTecnico = Convert.ToInt32( arreglo[4]);
 
              string[] arreglodetalle = xdetalle.Split('-');
 
@@ -85,9 +85,9 @@ namespace ComprobantesRetencion
              {
                  DetalleSolicitudTranfusion o = new DetalleSolicitudTranfusion();
                  string[] arreglo2 = arreglodetalle[i].Split('|');
-                  o.idHemocomponente =Convert.ToInt32(  arreglo2[0]);
+                  o.codHemocomponente =Convert.ToInt32(  arreglo2[0]);
                   o.cant =Convert.ToInt32(  arreglo2[1]);
-                  o.idSolicitud = oSolicitudTransfusionBE.idSolicitud;
+                  o.codSolicitud = oSolicitudTransfusionBE.codSolicitud;
                   oListaDetalleSolicitudTranfusion.Add(o);
              }
 

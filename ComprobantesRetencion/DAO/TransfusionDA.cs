@@ -46,22 +46,22 @@ namespace DAO
                 {
                     SolicitudTransfusionBE oSolicitudTransfusionBE = new SolicitudTransfusionBE();
 
-                    oSolicitudTransfusionBE.idSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oSolicitudTransfusionBE.NroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oSolicitudTransfusionBE.MotivoTransfusion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oSolicitudTransfusionBE.DesEstado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    oSolicitudTransfusionBE.Estado = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
-                    oSolicitudTransfusionBE.FechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    oSolicitudTransfusionBE.FechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
-                    oSolicitudTransfusionBE.IdEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
-                    oSolicitudTransfusionBE.idOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
-                    oSolicitudTransfusionBE.NroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
-                    oSolicitudTransfusionBE.Peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oSolicitudTransfusionBE.NroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
-                    oSolicitudTransfusionBE.Dolencia = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
-                    oSolicitudTransfusionBE.Edad = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
-                    oSolicitudTransfusionBE.Paciente = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
-                    oSolicitudTransfusionBE.Sexo = ((!reader[15].Equals(DBNull.Value)) ? reader.GetString(15) : "");
+                    oSolicitudTransfusionBE.codSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oSolicitudTransfusionBE.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oSolicitudTransfusionBE.motivoTransfusion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    oSolicitudTransfusionBE.desEstado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    oSolicitudTransfusionBE.estado = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
+                    oSolicitudTransfusionBE.fechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
+                    oSolicitudTransfusionBE.fechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
+                    oSolicitudTransfusionBE.codEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
+                    oSolicitudTransfusionBE.codOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
+                    oSolicitudTransfusionBE.nroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
+                    oSolicitudTransfusionBE.peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oSolicitudTransfusionBE.nroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
+                    oSolicitudTransfusionBE.dolencia = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
+                    oSolicitudTransfusionBE.edad = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oSolicitudTransfusionBE.paciente = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
+                    oSolicitudTransfusionBE.sexo = ((!reader[15].Equals(DBNull.Value)) ? reader.GetString(15) : "");
                     lista.Add(oSolicitudTransfusionBE);
                 }
                 reader.Close();
@@ -92,22 +92,22 @@ namespace DAO
                 {
                     SolicitudTransfusionBE oSolicitudTransfusionBE = new SolicitudTransfusionBE();
 
-                    oSolicitudTransfusionBE.idSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oSolicitudTransfusionBE.NroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oSolicitudTransfusionBE.MotivoTransfusion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oSolicitudTransfusionBE.DesEstado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    oSolicitudTransfusionBE.Estado = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
-                    oSolicitudTransfusionBE.FechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    oSolicitudTransfusionBE.FechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
-                    oSolicitudTransfusionBE.IdEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
-                    oSolicitudTransfusionBE.idOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
-                    oSolicitudTransfusionBE.NroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
-                    oSolicitudTransfusionBE.Peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oSolicitudTransfusionBE.NroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
-                    oSolicitudTransfusionBE.Dolencia = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
-                    oSolicitudTransfusionBE.Edad = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
-                    oSolicitudTransfusionBE.Paciente = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
-                    oSolicitudTransfusionBE.Sexo = ((!reader[15].Equals(DBNull.Value)) ? reader.GetString(15) : "");
+                    oSolicitudTransfusionBE.codSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oSolicitudTransfusionBE.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oSolicitudTransfusionBE.motivoTransfusion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    oSolicitudTransfusionBE.desEstado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    oSolicitudTransfusionBE.estado = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
+                    oSolicitudTransfusionBE.fechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
+                    oSolicitudTransfusionBE.fechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
+                    oSolicitudTransfusionBE.codEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
+                    oSolicitudTransfusionBE.codOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
+                    oSolicitudTransfusionBE.nroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
+                    oSolicitudTransfusionBE.peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oSolicitudTransfusionBE.nroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
+                    oSolicitudTransfusionBE.dolencia = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
+                    oSolicitudTransfusionBE.edad = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oSolicitudTransfusionBE.paciente = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
+                    oSolicitudTransfusionBE.sexo = ((!reader[15].Equals(DBNull.Value)) ? reader.GetString(15) : "");
                     lista.Add(oSolicitudTransfusionBE);
                 }
                 reader.Close();
@@ -141,19 +141,19 @@ namespace DAO
                 while (reader.Read())
                 {
 
-                    oSolicitudTransfusion.NroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oSolicitudTransfusion.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
                     oSolicitudTransfusion.motivo = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oSolicitudTransfusion.Estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    if (!reader[4].Equals(DBNull.Value)) oSolicitudTransfusion.FechaRegistro = reader.GetString(4);
-                    oSolicitudTransfusion.IdEstado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5).ToString() : "");
-                    oSolicitudTransfusion.IdOrdenMedica = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6).ToString() : "");
-                    oSolicitudTransfusion.NroOrdenMedica = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : "");
-                    oSolicitudTransfusion.Peso = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8).ToString() : "");
-                    oSolicitudTransfusion.NroHistoriaClinica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
-                    oSolicitudTransfusion.Dolencia = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oSolicitudTransfusion.Edad = ((!reader[11].Equals(DBNull.Value)) ? reader.GetInt32(11).ToString() : "");
-                    oSolicitudTransfusion.Paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
-                    oSolicitudTransfusion.Sexo = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oSolicitudTransfusion.estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    if (!reader[4].Equals(DBNull.Value)) oSolicitudTransfusion.fechaRegistro = reader.GetString(4);
+                    oSolicitudTransfusion.codEstado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5).ToString() : "");
+                    oSolicitudTransfusion.codOrdenMedica = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6).ToString() : "");
+                    oSolicitudTransfusion.nroOrdenMedica = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : "");
+                    oSolicitudTransfusion.peso = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8).ToString() : "");
+                    oSolicitudTransfusion.nroHistoriaClinica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
+                    oSolicitudTransfusion.dolencia = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oSolicitudTransfusion.edad = ((!reader[11].Equals(DBNull.Value)) ? reader.GetInt32(11).ToString() : "");
+                    oSolicitudTransfusion.paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
+                    oSolicitudTransfusion.sexo = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
 
                     //lista.Add(oSolicitudTransfusion);
                 }
@@ -165,8 +165,8 @@ namespace DAO
                     TipoSangreBE v = new TipoSangreBE()
                     {
 
-                        Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0).ToString() : ""),
-                        Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                        codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0).ToString() : ""),
+                        descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
 
                     };
                     oListaTipoSangreBE.Add(v);
@@ -179,8 +179,8 @@ namespace DAO
                     FactorRHBE v = new FactorRHBE()
                     {
 
-                        Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
-                        Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                        codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
+                        descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
 
                     };
                     oListaFactorRHBE.Add(v);
@@ -193,21 +193,21 @@ namespace DAO
                     HemocomponenteSolicitudBE v = new HemocomponenteSolicitudBE()
                     {
 
-                        idHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
-                        Hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                        CantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
-                        CantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
-                        IdOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
-                        IdOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
-                        IdSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
-                        Numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
-                        UnidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
-                        Compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
-                        NroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
-                        NroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
-                        NroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
-                        Estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
-                        NroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "")
+                        codHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
+                        hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                        cantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
+                        cantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
+                        codOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
+                        codOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
+                        codSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
+                        numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
+                        unidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
+                        compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
+                        nroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
+                        nroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
+                        nroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
+                        estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
+                        nroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "")
                     };
                     /*if (v.CantidadRequerida == "2")
                     {
@@ -254,20 +254,20 @@ namespace DAO
                 SqlDataReader reader = ExecuteReader(cmd, tipo_valor);
                 while (reader.Read())
                 {
-                    oSolicitudTransfusion.idSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oSolicitudTransfusion.NroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oSolicitudTransfusion.codSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oSolicitudTransfusion.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
                     oSolicitudTransfusion.motivo = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oSolicitudTransfusion.Estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    if (!reader[4].Equals(DBNull.Value)) oSolicitudTransfusion.FechaRegistro = reader.GetString(4);
-                    oSolicitudTransfusion.IdEstado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5).ToString() : "");
-                    oSolicitudTransfusion.IdOrdenMedica = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6).ToString() : "");
-                    oSolicitudTransfusion.NroOrdenMedica = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : "");
-                    oSolicitudTransfusion.Peso = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8).ToString() : "");
-                    oSolicitudTransfusion.NroHistoriaClinica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
-                    oSolicitudTransfusion.Dolencia = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oSolicitudTransfusion.Edad = ((!reader[11].Equals(DBNull.Value)) ? reader.GetInt32(11).ToString() : "");
-                    oSolicitudTransfusion.Paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
-                    oSolicitudTransfusion.Sexo = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oSolicitudTransfusion.estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    if (!reader[4].Equals(DBNull.Value)) oSolicitudTransfusion.fechaRegistro = reader.GetString(4);
+                    oSolicitudTransfusion.codEstado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5).ToString() : "");
+                    oSolicitudTransfusion.codOrdenMedica = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6).ToString() : "");
+                    oSolicitudTransfusion.nroOrdenMedica = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : "");
+                    oSolicitudTransfusion.peso = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8).ToString() : "");
+                    oSolicitudTransfusion.nroHistoriaClinica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
+                    oSolicitudTransfusion.dolencia = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oSolicitudTransfusion.edad = ((!reader[11].Equals(DBNull.Value)) ? reader.GetInt32(11).ToString() : "");
+                    oSolicitudTransfusion.paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : "");
+                    oSolicitudTransfusion.sexo = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
                 }
 
                 reader.NextResult();
@@ -277,8 +277,8 @@ namespace DAO
                     TipoSangreBE v = new TipoSangreBE()
                     {
 
-                        Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0).ToString() : ""),
-                        Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                        codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0).ToString() : ""),
+                        descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
 
                     };
                     oListaTipoSangreBE.Add(v);
@@ -291,8 +291,8 @@ namespace DAO
                     FactorRHBE v = new FactorRHBE()
                     {
 
-                        Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
-                        Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                        codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
+                        descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
 
                     };
                     oListaFactorRHBE.Add(v);
@@ -305,21 +305,21 @@ namespace DAO
                     HemocomponenteSolicitudBE v = new HemocomponenteSolicitudBE()
                     {
 
-                        idHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
-                        Hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                        CantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
-                        CantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
-                        IdOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
-                        IdOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
-                        IdSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
-                        Numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
-                        UnidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
-                        Compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
-                        NroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
-                        NroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
-                        NroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
-                        Estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
-                        NroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "")
+                        codHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
+                        hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                        cantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
+                        cantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
+                        codOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
+                        codOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
+                        codSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
+                        numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
+                        unidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
+                        compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
+                        nroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
+                        nroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
+                        nroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
+                        estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
+                        nroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "")
                     };
 
                     oListaHemocomponenteSolicitudBE.Add(v);
@@ -364,15 +364,15 @@ namespace DAO
             {
                 SqlParameter[] paramsToStore = new SqlParameter[15];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                paramsToStore[0].Value = oTransfusionBE.idSolicitud;
+                paramsToStore[0].Value = oTransfusionBE.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@estado", SqlDbType.Int);
                 paramsToStore[1].Value = oTransfusionBE.estado;
                 paramsToStore[2] = new SqlParameter("@motivo", SqlDbType.VarChar, 100);
                 paramsToStore[2].Value = oTransfusionBE.motivo;
                 paramsToStore[3] = new SqlParameter("@idOrdenMedica", SqlDbType.Int);
-                paramsToStore[3].Value = oTransfusionBE.idOrdenMedica;
+                paramsToStore[3].Value = oTransfusionBE.codOrdenMedica;
                 paramsToStore[4] = new SqlParameter("@idtecnico", SqlDbType.Int);
-                paramsToStore[4].Value = oTransfusionBE.idtecnico;
+                paramsToStore[4].Value = oTransfusionBE.codTecnico;
 
                 using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "UPS_INS_SOLICITUDTRAN", paramsToStore))
                 {
@@ -396,7 +396,7 @@ namespace DAO
             {
                 SqlParameter[] paramsToStore = new SqlParameter[15];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                paramsToStore[0].Value = oTransfusionBE.idSolicitud;
+                paramsToStore[0].Value = oTransfusionBE.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@estado", SqlDbType.Int);
                 paramsToStore[1].Value = oTransfusionBE.estado;
                 paramsToStore[2] = new SqlParameter("@motivo", SqlDbType.VarChar, 4000);
@@ -404,13 +404,13 @@ namespace DAO
                 //paramsToStore[3] = new SqlParameter("@idOrdenMedica", SqlDbType.Int);
                 //paramsToStore[3].Value = oTransfusionBE.idOrdenMedica;
                 paramsToStore[3] = new SqlParameter("@idTecnico", SqlDbType.Int);
-                paramsToStore[3].Value = oTransfusionBE.idtecnico;
+                paramsToStore[3].Value = oTransfusionBE.codTecnico;
                 paramsToStore[4] = new SqlParameter("@idPaciente", SqlDbType.Int);
-                paramsToStore[4].Value = oTransfusionBE.IdPaciente;
+                paramsToStore[4].Value = oTransfusionBE.codPaciente;
                 paramsToStore[5] = new SqlParameter("@idFactorRH", SqlDbType.Int);
-                paramsToStore[5].Value = oTransfusionBE.idTipoFactorRH;
+                paramsToStore[5].Value = oTransfusionBE.codTipoFactorRH;
                 paramsToStore[6] = new SqlParameter("@idTipoSangre", SqlDbType.Int);
-                paramsToStore[6].Value = oTransfusionBE.idTipoSangre;
+                paramsToStore[6].Value = oTransfusionBE.codTipoSangre;
 
                 using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "UPS_INS_SOLICITUDTRAN_EMERGENCIA", paramsToStore))
                 {
@@ -443,11 +443,11 @@ namespace DAO
                 paramsToStore[3] = new SqlParameter("@sexo", SqlDbType.VarChar, 1);
                 paramsToStore[3].Value = oPaciente.sexo;
                 paramsToStore[4] = new SqlParameter("@FechaNacimiento", SqlDbType.Date);
-                paramsToStore[4].Value = oPaciente.FechaNacimiento;
+                paramsToStore[4].Value = oPaciente.fechaNacimiento;
                 paramsToStore[5] = new SqlParameter("@IdTipoDocumentoIdentidad", SqlDbType.Int);
-                paramsToStore[5].Value = oPaciente.IdTipoDocumentoIdentidad;
+                paramsToStore[5].Value = oPaciente.codTipoDocumentoIdentidad;
                 paramsToStore[6] = new SqlParameter("@NroDocumentoIdenidad", SqlDbType.VarChar, 15);
-                paramsToStore[6].Value = oPaciente.NroDocumentoIdenidad;
+                paramsToStore[6].Value = oPaciente.nroDocumentoIdenidad;
 
                 using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "UPS_INS_REGISTRO_PACIENTE", paramsToStore))
                 {
@@ -472,9 +472,9 @@ namespace DAO
             {
                 SqlParameter[] paramsToStore = new SqlParameter[15];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                paramsToStore[0].Value = oDetalleSolicitudTranfusion.idSolicitud;
+                paramsToStore[0].Value = oDetalleSolicitudTranfusion.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@idHemocomponente", SqlDbType.Int);
-                paramsToStore[1].Value = oDetalleSolicitudTranfusion.idHemocomponente;
+                paramsToStore[1].Value = oDetalleSolicitudTranfusion.codHemocomponente;
                 paramsToStore[2] = new SqlParameter("@cant", SqlDbType.Int);
                 paramsToStore[2].Value = oDetalleSolicitudTranfusion.cant;
 
@@ -499,9 +499,9 @@ namespace DAO
             {
                 SqlParameter[] paramsToStore = new SqlParameter[15];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                paramsToStore[0].Value = oDetalleSolicitudTranfusion.idSolicitud;
+                paramsToStore[0].Value = oDetalleSolicitudTranfusion.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@idHemocomponente", SqlDbType.Int);
-                paramsToStore[1].Value = oDetalleSolicitudTranfusion.idHemocomponente;
+                paramsToStore[1].Value = oDetalleSolicitudTranfusion.codHemocomponente;
                 paramsToStore[2] = new SqlParameter("@cant", SqlDbType.Int);
                 paramsToStore[2].Value = oDetalleSolicitudTranfusion.cant;
 
@@ -544,9 +544,9 @@ namespace DAO
                     {
                         TecnicoBE p = new TecnicoBE()
                         {
-                            IdTecnico = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Nombre = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            Estado = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
+                            codTecnico = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            nombre = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                            estado = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
 
                         };
 
@@ -562,12 +562,12 @@ namespace DAO
                     {
                         OrdenMedicaBE v = new OrdenMedicaBE()
                         {
-                            idOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            codOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
                             codigoOrden = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            idPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
-                            Paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
+                            codPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
+                            paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
                             fecha = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : ""),
-                            Estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
+                            estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
                             edad = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6) : 0),
                             peso = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7) : 0),
                             sexo = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : ""),
@@ -585,10 +585,10 @@ namespace DAO
                         HemocomponenteBE v = new HemocomponenteBE()
                         {
 
-                            IdHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Codigo = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            Descripcion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : ""),
-                            Estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetInt32(3) : 0)
+                            codHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            codigo = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                            descripcion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : ""),
+                            estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetInt32(3) : 0)
 
                         };
                         oListaHemocomponenteBE.Add(v);
@@ -642,9 +642,9 @@ namespace DAO
                     {
                         TecnicoBE p = new TecnicoBE()
                         {
-                            IdTecnico = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Nombre = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            Estado = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
+                            codTecnico = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            nombre = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                            estado = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
 
                         };
 
@@ -660,12 +660,12 @@ namespace DAO
                     {
                         OrdenMedicaBE v = new OrdenMedicaBE()
                         {
-                            idOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            codOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
                             codigoOrden = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            idPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
-                            Paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
+                            codPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
+                            paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
                             fecha = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : ""),
-                            Estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
+                            estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
                             edad = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6) : 0),
                             peso = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7) : 0),
                             sexo = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : ""),
@@ -683,10 +683,10 @@ namespace DAO
                         HemocomponenteBE v = new HemocomponenteBE()
                         {
 
-                            IdHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Codigo = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            Descripcion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : ""),
-                            Estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetInt32(3) : 0)
+                            codHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            codigo = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                            descripcion = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : ""),
+                            estado = ((!reader[3].Equals(DBNull.Value)) ? reader.GetInt32(3) : 0)
 
                         };
                         oListaHemocomponenteBE.Add(v);
@@ -700,12 +700,12 @@ namespace DAO
                     {
                         PacienteBE pc = new PacienteBE()
                         {
-                            IdTipoDocumentoIdentidad = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            NroDocumentoIdenidad = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                            codTipoDocumentoIdentidad = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            nroDocumentoIdenidad = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
                             nombres = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : ""),
                             apellidoPaterno = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
                             apellidoMaterno = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : ""),
-                            IdPaciente = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0)
+                            codPaciente = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0)
                         };
                         oListaPaciente.Add(pc);
                     }
@@ -726,8 +726,8 @@ namespace DAO
                     {
                         TipoBE tipoRH = new TipoBE()
                         {
-                            Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                            codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
                         };
                         oListaTipoRH.Add(tipoRH);
                     }
@@ -739,8 +739,8 @@ namespace DAO
                     {
                         TipoBE tipoSangre = new TipoBE()
                         {
-                            Codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
-                            Descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
+                            codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "")
                         };
                         oListaTipoSangre.Add(tipoSangre);
                     }
@@ -785,12 +785,12 @@ namespace DAO
                     {
                         OrdenMedicaBE v = new OrdenMedicaBE()
                         {
-                            idOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
+                            codOrden = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0),
                             codigoOrden = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                            idPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
-                            Paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
+                            codPaciente = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0),
+                            paciente = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : ""),
                             fecha = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : ""),
-                            Estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
+                            estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetInt32(5) : 0),
                             edad = ((!reader[6].Equals(DBNull.Value)) ? reader.GetInt32(6) : 0),
                             peso = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7) : 0),
                             sexo = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : ""),
@@ -843,22 +843,22 @@ namespace DAO
 
                     HemocomponenteSolicitudBE v = new HemocomponenteSolicitudBE()
                     {
-                        idHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
-                        Hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
-                        CantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
-                        CantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
-                        IdOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
-                        IdOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
-                        IdSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
-                        Numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
-                        UnidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
-                        Compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
-                        NroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
-                        NroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
-                        NroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
-                        Estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
-                        NroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : ""),
-                        idSolicitud = ((!reader[15].Equals(DBNull.Value)) ? reader.GetSqlInt32(15).ToString() : "")
+                        codHemocomponente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetSqlInt32(0).ToString() : ""),
+                        hemocomponente = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : ""),
+                        cantidadRequerida = ((!reader[2].Equals(DBNull.Value)) ? reader.GetSqlInt32(2).ToString() : ""),
+                        cantidadAtendida = ((!reader[3].Equals(DBNull.Value)) ? reader.GetSqlInt32(3).ToString() : ""),
+                        codOrdenRequerimiento = ((!reader[4].Equals(DBNull.Value)) ? reader.GetSqlInt32(4).ToString() : ""),
+                        codOrdenDonacion = ((!reader[5].Equals(DBNull.Value)) ? reader.GetSqlInt32(5).ToString() : ""),
+                        codSolicitudExterna = ((!reader[6].Equals(DBNull.Value)) ? reader.GetSqlInt32(6).ToString() : ""),
+                        numero = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7) : ""),
+                        unidadesCompatibles = ((!reader[8].Equals(DBNull.Value)) ? reader.GetSqlInt32(8).ToString() : ""),
+                        compatibilidad = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : ""),
+                        nroOrdenDonacion = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : ""),
+                        nroSolicitudExterna = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : ""),
+                        nroOrdenRequerimiento = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12) : ""),
+                        estado = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : ""),
+                        nroSolicitud = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : ""),
+                        codSolicitud = ((!reader[15].Equals(DBNull.Value)) ? reader.GetSqlInt32(15).ToString() : "")
                     };
 
                     oHemocomponenteSolicitudBE.Add(v);
@@ -887,7 +887,7 @@ namespace DAO
                 SqlParameter[] paramsToStore = new SqlParameter[2];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
                 paramsToStore[0].Direction = ParameterDirection.Input;
-                paramsToStore[0].Value = oSolicitudTransfusionBE.idSolicitud;
+                paramsToStore[0].Value = oSolicitudTransfusionBE.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@idOrdenRequerimiento", SqlDbType.Int);
                 paramsToStore[1].Direction = ParameterDirection.Output;
 
@@ -903,11 +903,11 @@ namespace DAO
                 {
                     SqlParameter[] paramsToStore1 = new SqlParameter[4];
                     paramsToStore1[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                    paramsToStore1[0].Value = oSolicitudTransfusionBE.idSolicitud;
+                    paramsToStore1[0].Value = oSolicitudTransfusionBE.codSolicitud;
                     paramsToStore1[1] = new SqlParameter("@idHemocomponente", SqlDbType.Int);
-                    paramsToStore1[1].Value = oSolicitudTransfusionBE.oListaHemocomponenteSolicitudBE[i].idHemocomponente;
+                    paramsToStore1[1].Value = oSolicitudTransfusionBE.oListaHemocomponenteSolicitudBE[i].codHemocomponente;
                     paramsToStore1[2] = new SqlParameter("@NroSerie", SqlDbType.VarChar);
-                    paramsToStore1[2].Value = oSolicitudTransfusionBE.oListaHemocomponenteSolicitudBE[i].NroSerieUnidad;
+                    paramsToStore1[2].Value = oSolicitudTransfusionBE.oListaHemocomponenteSolicitudBE[i].nroSerieUnidad;
                     paramsToStore1[3] = new SqlParameter("@idOrdenRequerimiento", SqlDbType.Int);
                     paramsToStore1[3].Value = idOrdenRequerimiento;
 
@@ -941,9 +941,9 @@ namespace DAO
             {
 
                 paramsToStore[0] = new SqlParameter("@estado", SqlDbType.Int);
-                paramsToStore[0].Value = oOrdenDonacion.Estado;
+                paramsToStore[0].Value = oOrdenDonacion.estado;
                 paramsToStore[1] = new SqlParameter("@observacion", SqlDbType.VarChar, 50);
-                paramsToStore[1].Value = oOrdenDonacion.Observacion;
+                paramsToStore[1].Value = oOrdenDonacion.observacion;
                 paramsToStore[2] = new SqlParameter("@idOrdenDonacion", SqlDbType.Int);
                 paramsToStore[2].Direction = ParameterDirection.Output;
 
@@ -964,11 +964,11 @@ namespace DAO
                     paramsToStoreDetalle[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
                     paramsToStoreDetalle[0].Value = 1; //TODO //oHemocomponenteSolicitudBE.idSolicitud;
                     paramsToStoreDetalle[1] = new SqlParameter("@idHemocomponente", SqlDbType.Int);
-                    paramsToStoreDetalle[1].Value = oHemocomponenteSolicitudBE.idHemocomponente;
+                    paramsToStoreDetalle[1].Value = oHemocomponenteSolicitudBE.codHemocomponente;
                     paramsToStoreDetalle[2] = new SqlParameter("@idOrdenDonacion", SqlDbType.Int);
                     paramsToStoreDetalle[2].Value = xValorOrdenDonacion;
                     paramsToStoreDetalle[3] = new SqlParameter("@idEstado", SqlDbType.Int);
-                    paramsToStoreDetalle[3].Value = oOrdenDonacion.Estado;
+                    paramsToStoreDetalle[3].Value = oOrdenDonacion.estado;
 
                     using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "[UPS_INS_HEM_SOLIC]", paramsToStoreDetalle))
                     {
@@ -996,13 +996,13 @@ namespace DAO
             {
                 SqlParameter[] paramsToStore = new SqlParameter[15];
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
-                paramsToStore[0].Value = oHemocomponenteSolicitudBE.idSolicitud;
+                paramsToStore[0].Value = oHemocomponenteSolicitudBE.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@idHemocomponente", SqlDbType.Int);
-                paramsToStore[1].Value = oHemocomponenteSolicitudBE.idHemocomponente;
+                paramsToStore[1].Value = oHemocomponenteSolicitudBE.codHemocomponente;
                 paramsToStore[2] = new SqlParameter("@idOrdenDonacion", SqlDbType.Int);
-                paramsToStore[2].Value = oHemocomponenteSolicitudBE.IdOrdenDonacion;
+                paramsToStore[2].Value = oHemocomponenteSolicitudBE.codOrdenDonacion;
                 paramsToStore[3] = new SqlParameter("@idEstado", SqlDbType.Int);
-                paramsToStore[3].Value = oHemocomponenteSolicitudBE.Estado;
+                paramsToStore[3].Value = oHemocomponenteSolicitudBE.estado;
                 /*
                 paramsToStore[3] = new SqlParameter("@idOrdenMedica", SqlDbType.Int);
                 paramsToStore[3].Value = oOrdenDonacion.idOrdenMedica;
@@ -1038,7 +1038,7 @@ namespace DAO
                     while (reader.Read())
                     {
                         BancoBE item = new BancoBE();
-                        item.id = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                        item.codigo = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
                         item.descripcion = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
                         result.Add(item);
                     }
@@ -1078,22 +1078,22 @@ namespace DAO
                 SqlDataReader reader = ExecuteReader(cmd, tipo_valor);
                 while (reader.Read())
                 {
-                    oResultadoPaciente.Id_ResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oResultadoPaciente.Tipo_Analisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oResultadoPaciente.Fecha_Emision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oResultadoPaciente.Valor_Optimo_Final = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    oResultadoPaciente.Valor_Optimo_Final = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
-                    oResultadoPaciente.Tipo_Medida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    oResultadoPaciente.Resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
-                    oResultadoPaciente.Medico_Solicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
-                    oResultadoPaciente.Fecha_Solicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
-                    oResultadoPaciente.Id_Estado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
-                    oResultadoPaciente.Mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oResultadoPaciente.Anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
-                    oResultadoPaciente.Paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
-                    oResultadoPaciente.Id_Tipo_Analisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
-                    oResultadoPaciente.Valor_Optimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
-                    oResultadoPaciente.Id_Paciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
+                    oResultadoPaciente.codResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oResultadoPaciente.tipoAnalisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oResultadoPaciente.fechaEmision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    oResultadoPaciente.valorOptimoFinal = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    oResultadoPaciente.valorOptimoFinal = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
+                    oResultadoPaciente.tipoMedida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
+                    oResultadoPaciente.resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
+                    oResultadoPaciente.medicoSolicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
+                    oResultadoPaciente.fechaSolicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
+                    oResultadoPaciente.codEstado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
+                    oResultadoPaciente.mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oResultadoPaciente.anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
+                    oResultadoPaciente.paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
+                    oResultadoPaciente.codTipoAnalisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oResultadoPaciente.valorOptimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
+                    oResultadoPaciente.codPaciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
                 }
                 reader.Close();
 
@@ -1119,22 +1119,22 @@ namespace DAO
                 SqlDataReader reader = ExecuteReader(cmd, tipo_valor);
                 while (reader.Read())
                 {
-                    oResultadoPaciente.Id_ResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oResultadoPaciente.Tipo_Analisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oResultadoPaciente.Fecha_Emision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oResultadoPaciente.Valor_Optimo_Final = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    oResultadoPaciente.Valor_Optimo_Final = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
-                    oResultadoPaciente.Tipo_Medida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    oResultadoPaciente.Resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
-                    oResultadoPaciente.Medico_Solicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
-                    oResultadoPaciente.Fecha_Solicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
-                    oResultadoPaciente.Id_Estado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
-                    oResultadoPaciente.Mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oResultadoPaciente.Anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
-                    oResultadoPaciente.Paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
-                    oResultadoPaciente.Id_Tipo_Analisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
-                    oResultadoPaciente.Valor_Optimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
-                    oResultadoPaciente.Id_Paciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
+                    oResultadoPaciente.codResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oResultadoPaciente.tipoAnalisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oResultadoPaciente.fechaEmision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    oResultadoPaciente.valorOptimoFinal = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    oResultadoPaciente.valorOptimoFinal = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
+                    oResultadoPaciente.tipoMedida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
+                    oResultadoPaciente.resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
+                    oResultadoPaciente.medicoSolicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
+                    oResultadoPaciente.fechaSolicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
+                    oResultadoPaciente.codEstado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
+                    oResultadoPaciente.mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oResultadoPaciente.anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
+                    oResultadoPaciente.paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
+                    oResultadoPaciente.codTipoAnalisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oResultadoPaciente.valorOptimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
+                    oResultadoPaciente.codPaciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
                 }
                 reader.Close();
 
@@ -1163,22 +1163,22 @@ namespace DAO
                 {
                     ResultadoPaciente oSolicitudTransfusionBE = new ResultadoPaciente();
 
-                    oSolicitudTransfusionBE.Id_ResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
-                    oSolicitudTransfusionBE.Tipo_Analisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oSolicitudTransfusionBE.Fecha_Emision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
-                    oSolicitudTransfusionBE.Valor_Optimo_Final = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
-                    oSolicitudTransfusionBE.Valor_Optimo_Final = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
-                    oSolicitudTransfusionBE.Tipo_Medida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    oSolicitudTransfusionBE.Resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
-                    oSolicitudTransfusionBE.Medico_Solicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
-                    oSolicitudTransfusionBE.Fecha_Solicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
-                    oSolicitudTransfusionBE.Id_Estado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
-                    oSolicitudTransfusionBE.Mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
-                    oSolicitudTransfusionBE.Anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
-                    oSolicitudTransfusionBE.Paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
-                    oSolicitudTransfusionBE.Id_Tipo_Analisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
-                    oSolicitudTransfusionBE.Valor_Optimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
-                    oSolicitudTransfusionBE.Id_Paciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
+                    oSolicitudTransfusionBE.codResultadoAC = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    oSolicitudTransfusionBE.tipoAnalisis = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
+                    oSolicitudTransfusionBE.fechaEmision = ((!reader[2].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    oSolicitudTransfusionBE.valorOptimoFinal = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    oSolicitudTransfusionBE.valorOptimoFinal = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
+                    oSolicitudTransfusionBE.tipoMedida = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
+                    oSolicitudTransfusionBE.resultado = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
+                    oSolicitudTransfusionBE.medicoSolicitante = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToString() : "");
+                    oSolicitudTransfusionBE.fechaSolicitud = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
+                    oSolicitudTransfusionBE.codEstado = ((!reader[9].Equals(DBNull.Value)) ? reader.GetInt32(9) : 0);
+                    oSolicitudTransfusionBE.mes = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    oSolicitudTransfusionBE.anio = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
+                    oSolicitudTransfusionBE.paciente = ((!reader[12].Equals(DBNull.Value)) ? reader.GetString(12).ToUpper() : "");
+                    oSolicitudTransfusionBE.codTipoAnalisis = ((!reader[13].Equals(DBNull.Value)) ? reader.GetString(13) : "");
+                    oSolicitudTransfusionBE.valorOptimo = ((!reader[14].Equals(DBNull.Value)) ? reader.GetString(14) : "");
+                    oSolicitudTransfusionBE.codPaciente = ((!reader[15].Equals(DBNull.Value)) ? reader.GetInt32(15) : 0);
 
                     lista.Add(oSolicitudTransfusionBE);
                 }

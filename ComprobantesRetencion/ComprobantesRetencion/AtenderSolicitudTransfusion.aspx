@@ -458,24 +458,32 @@
                         <div class="brand">Clínica Ricardo Palma</div>
                     </div>
                     <nav class="menu">
-                        <ul class="nav metismenu" id="sidebar-menu">
-                            <li><a href="#">
-                                <i class="fa fa-home"></i>Panel de Control
+                         <ul class="nav metismenu" id="sidebar-menu">
+                            <li><a href="/GenerarSolicitudTransfusion.aspx">
+                                <i class="fa fa-home"></i>Generar Solicitud de Transfusión
                             </a>
                             </li>
-                            <li><a href="#">
-                                <i class="fa fa-th-large"></i>Analisis Clínico
+                            <li><a href="/GenerarSolicitudTransfusionEmergencia.aspx">
+                                <i class="fa fa-th-large"></i>Generar Solicitud de Transfusión de Emergencia
                             </a>
                             </li>
-                            <li><a href="#">
-                                <i class="fa fa-bar-chart"></i>Donaciones 
+                            <li><a href="/VisarSolicitudTransfusion.aspx">
+                                <i class="fa fa-bar-chart"></i>Visar Solicitud 
                             </a>
                             </li>
-                            <li><a href="#">
-                                <i class="fa fa-table"></i>Transfuciones
+                            <li><a href="/transfusion/FrmListaSolicitudTransfusion.aspx">
+                                <i class="fa fa-table"></i>Transfusiones
                             </a>
                             </li>
-                        </ul>
+                            <li><a href="/transfusion/ListarSolicitudTransfusionExterna.aspx">
+                                <i class="fa fa-table"></i>Actualizar Solicitud de Transfusión Externa
+                            </a>
+                            </li>
+                            <li><a href="/reportes/reportePaciente.aspx">
+                                <i class="fa fa-table"></i>Reportes
+                            </a>
+                            </li>
+                             </ul>
                     </nav>
                 </div>
                 <footer class="sidebar-footer">

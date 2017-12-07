@@ -20,11 +20,11 @@ namespace ComprobantesRetencion
             oDatosClinicaBE = new TransfusionBL().lstDatosEmergencia();
             int contador = 0;
             foreach(var x in oDatosClinicaBE.oListaPaciente) {
-                cboPaciente.Items.Insert(contador, new ListItem(x.NroDocumentoIdenidad + " " + x.nombres + " " + x.apellidoPaterno + " " + x.apellidoMaterno, x.IdPaciente + ""));
+                cboPaciente.Items.Insert(contador, new ListItem(x.nroDocumentoIdenidad + " " + x.nombres + " " + x.apellidoPaterno + " " + x.apellidoMaterno, x.codPaciente + ""));
             }
             foreach (var x in oDatosClinicaBE.oListaTecnicoBE)
             {
-                cboTecnico.Items.Insert(contador, new ListItem(x.Nombre , x.IdTecnico + ""));
+                cboTecnico.Items.Insert(contador, new ListItem(x.nombre , x.codTecnico + ""));
             }
 
         }
@@ -61,10 +61,10 @@ namespace ComprobantesRetencion
             }
             
             DateTime fechaNacimientoDate = DateTime.ParseExact(arreglo[5], "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            oPaciente.FechaNacimiento = fechaNacimientoDate;
+            oPaciente.fechaNacimiento = fechaNacimientoDate;
 
-            oPaciente.IdTipoDocumentoIdentidad = Convert.ToInt32(arreglo[6]);
-            oPaciente.NroDocumentoIdenidad = arreglo[7];
+            oPaciente.codTipoDocumentoIdentidad = Convert.ToInt32(arreglo[6]);
+            oPaciente.nroDocumentoIdenidad = arreglo[7];
 
             string xValor = "";
             xValor = new TransfusionBL().insRegistroPaciente(oPaciente);
@@ -90,13 +90,13 @@ namespace ComprobantesRetencion
             List<DetalleSolicitudTranfusion> oListaDetalleSolicitudTranfusion = new List<DetalleSolicitudTranfusion>();
             string[] arreglo = xdata.Split('|');
 
-            oSolicitudTransfusionBE.idSolicitud = Convert.ToInt32(arreglo[0]);
+            oSolicitudTransfusionBE.codSolicitud = Convert.ToInt32(arreglo[0]);
             oSolicitudTransfusionBE.estado = 1;//REGISTRADO
             oSolicitudTransfusionBE.motivo = arreglo[1];
-            oSolicitudTransfusionBE.idtecnico = Convert.ToInt32(arreglo[2]);
-            oSolicitudTransfusionBE.IdPaciente = arreglo[3];
-            oSolicitudTransfusionBE.idTipoFactorRH = Convert.ToInt32(arreglo[4]);
-            oSolicitudTransfusionBE.idTipoSangre = Convert.ToInt32(arreglo[5]);
+            oSolicitudTransfusionBE.codTecnico = Convert.ToInt32(arreglo[2]);
+            oSolicitudTransfusionBE.codPaciente = arreglo[3];
+            oSolicitudTransfusionBE.codTipoFactorRH = Convert.ToInt32(arreglo[4]);
+            oSolicitudTransfusionBE.codTipoSangre = Convert.ToInt32(arreglo[5]);
 
             string[] arreglodetalle = xdetalle.Split('-');
 
@@ -104,9 +104,9 @@ namespace ComprobantesRetencion
             {
                 DetalleSolicitudTranfusion o = new DetalleSolicitudTranfusion();
                 string[] arreglo2 = arreglodetalle[i].Split('|');
-                o.idHemocomponente = Convert.ToInt32(arreglo2[0]);
+                o.codHemocomponente = Convert.ToInt32(arreglo2[0]);
                 o.cant = Convert.ToInt32(arreglo2[1]);
-                o.idSolicitud = oSolicitudTransfusionBE.idSolicitud;
+                o.codSolicitud = oSolicitudTransfusionBE.codSolicitud;
                 oListaDetalleSolicitudTranfusion.Add(o);
             }
 

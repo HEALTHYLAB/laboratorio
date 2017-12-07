@@ -9,3 +9,15 @@ E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\C
 E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
 E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll
 E:\27_UPC\9noCiclo\Taller Proyecto 2\tsf\RicardoPalmaUPC\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.dll.config
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.dll
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.pdb
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.dll
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.dll
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.dll
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.pdb
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.pdb
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.pdb
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll
+C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb

@@ -9,19 +9,19 @@ namespace Entity
     [Serializable]
     public class HemocomponenteBE
     {
-        public string Codigo { get; set; }
-        public string Descripcion { get; set; }
-        public string GlobulosRojos { get; set; }
-        public string FechaRegistro { get; set; }
-        public string UsuarioRegistro { get; set; }
-        public string FechaModificacion { get; set; }
-        public string UsuarioModificacion { get; set; }
-        public string IdBancoSangre { get; set; }
-        public int IdHemocomponente { get; set; }
-        public string CantidadRequerida { get; set; }
-        public string CantidadAtendida { get; set; }
+        public string codigo { get; set; }
+        public string descripcion { get; set; }
+        public string globulosRojos { get; set; }
+        public string fechaRegistro { get; set; }
+        public string usuarioRegistro { get; set; }
+        public string fechaModificacion { get; set; }
+        public string usuarioModificacion { get; set; }
+        public string codBancoSangre { get; set; }
+        public int codHemocomponente { get; set; }
+        public string cantidadRequerida { get; set; }
+        public string cantidadAtendida { get; set; }
         public string cantidadstock { get; set; }
-        public string Compatibilidad { get; set; }
-        public int Estado { get; set; }
+        public string compatibilidad { get; set; }
+        public int estado { get; set; }
     }
 }

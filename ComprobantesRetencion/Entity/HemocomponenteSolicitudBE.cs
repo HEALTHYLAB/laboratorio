@@ -8,22 +8,22 @@ namespace Entity
 {
    public class HemocomponenteSolicitudBE
     {
-       public string idSolicitud { get; set; }
-       public string idHemocomponente { get; set; }
-       public string Numero { get; set; }
-       public string CantidadRequerida { get; set; }
-       public string CantidadAtendida { get; set; }
-       public string UnidadesCompatibles { get; set; }
-       public string IdOrdenRequerimiento { get; set; }
-       public string IdOrdenDonacion { get; set; }
-       public string IdSolicitudExterna { get; set; }
-       public string Hemocomponente { get; set; }
-       public string Estado { get; set; }
-       public string Compatibilidad { get; set; }
-       public string NroOrdenDonacion { get; set; }
-       public string NroSolicitudExterna { get; set; }
-       public string NroOrdenRequerimiento { get; set; }
-       public string NroSolicitud { get; set; }
-       public string NroSerieUnidad { get; set; }
+       public string codSolicitud { get; set; }
+       public string codHemocomponente { get; set; }
+       public string numero { get; set; }
+       public string cantidadRequerida { get; set; }
+       public string cantidadAtendida { get; set; }
+       public string unidadesCompatibles { get; set; }
+       public string codOrdenRequerimiento { get; set; }
+       public string codOrdenDonacion { get; set; }
+       public string codSolicitudExterna { get; set; }
+       public string hemocomponente { get; set; }
+       public string estado { get; set; }
+       public string compatibilidad { get; set; }
+       public string nroOrdenDonacion { get; set; }
+       public string nroSolicitudExterna { get; set; }
+       public string nroOrdenRequerimiento { get; set; }
+       public string nroSolicitud { get; set; }
+       public string nroSerieUnidad { get; set; }
     }
 }

@@ -8,8 +8,8 @@ namespace Entity
 {
    public class DetalleSolicitudTranfusion
     {
-       public int idSolicitud { get; set; }
-       public int idHemocomponente { get; set; }
+       public int codSolicitud { get; set; }
+       public int codHemocomponente { get; set; }
        public int cant { get; set; }
     }
 }

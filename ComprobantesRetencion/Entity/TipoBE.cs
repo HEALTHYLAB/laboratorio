@@ -8,7 +8,7 @@ namespace Entity
 {
     public class TipoBE
     {
-        public int Codigo { get; set; }
-        public string Descripcion { get; set; }
+        public int codigo { get; set; }
+        public string descripcion { get; set; }
     }
 }
