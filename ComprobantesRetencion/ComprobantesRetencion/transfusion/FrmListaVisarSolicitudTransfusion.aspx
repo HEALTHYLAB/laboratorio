@@ -199,6 +199,10 @@
                                 <i class="fa fa-table"></i>Transfusiones
                             </a>
                             </li>
+                         <li><a href="/transfusion/FrmListaVisarSolicitudTransfusion.aspx">
+                                <i class="fa fa-table"></i>Visar Solicitud
+                            </a>
+                            </li>
                             <li><a href="/transfusion/ListarSolicitudTransfusionExterna.aspx">
                                 <i class="fa fa-table"></i>Actualizar Solicitud de Transfusión Externa
                             </a>

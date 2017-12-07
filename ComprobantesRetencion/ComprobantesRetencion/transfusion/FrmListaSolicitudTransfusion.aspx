@@ -141,7 +141,7 @@
                         <div class="brand">Clínica Ricardo Palma</div>
                     </div>
                     <nav class="menu">
-                    <ul class="nav metismenu" id="sidebar-menu">
+                   <ul class="nav metismenu" id="sidebar-menu">
                             <li><a href="/GenerarSolicitudTransfusion.aspx">
                                 <i class="fa fa-home"></i>Generar Solicitud de Transfusión
                             </a>
@@ -152,6 +152,10 @@
                             </li>
                             <li><a href="/transfusion/FrmListaSolicitudTransfusion.aspx">
                                 <i class="fa fa-table"></i>Transfusiones
+                            </a>
+                            </li>
+                         <li><a href="/transfusion/FrmListaVisarSolicitudTransfusion.aspx">
+                                <i class="fa fa-table"></i>Visar Solicitud
                             </a>
                             </li>
                             <li><a href="/transfusion/ListarSolicitudTransfusionExterna.aspx">
