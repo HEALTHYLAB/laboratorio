@@ -23,3 +23,13 @@ C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRet
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb
 C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.csprojResolveAssemblyReference.cache
 C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.dll.config
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\ComprobantesRetencion.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\Entity.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\Negocios.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\bin\DAO.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\ComprobantesRetencion\obj\Debug\ComprobantesRetencion.pdb

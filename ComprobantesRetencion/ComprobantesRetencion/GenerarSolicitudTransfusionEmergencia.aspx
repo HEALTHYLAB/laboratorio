@@ -870,7 +870,7 @@
 					                                    <asp:DropDownList data-placeholder="seleccionar técnico" runat="server" ID="cboTecnico" class="chzn-select" Style="width: 350px;">
 						                                    <asp:ListItem Text="" Value=""></asp:ListItem>
 					                                    </asp:DropDownList>                    
-                                                        </form>
+                                                      
                                                     </div>
 				                               </div> 
                                                                                                

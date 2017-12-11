@@ -1,0 +1,60 @@
+﻿.center_div {
+    margin: 0 auto;
+    width: 80%; /* value of your choice which suits your alignment */
+    margin-top: 15%;
+}
+
+.universo {
+    /*background-color: #ebe9e5;*/
+        width: 300%;
+    min-height: 100%;
+    background: url(../images/bgHome.png) repeat;
+    position: absolute;
+    background: url(/img/animation.png) repeat;
+    position: absolute;
+    animation-duration: 120s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+body 
+{
+    background-color: #ebe9e5;
+}
+.dat-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    width: 8%;
+}
+
+.dat-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    width: 8%;
+}
+
+
+@media(max-width:992px) {
+
+    .center_div {
+        margin-top: 35%;
+    }
+
+    .input-group {
+        margin-bottom: 3%;
+    }
+
+    .dat-br {
+        width: 15%;
+    }
+
+    .dat-tl {
+        width: 15%;
+    }
+}
+
+@keyframes slidein{from{margin-left:-200%;width:300%}to{margin-left:0%;width:300%}}

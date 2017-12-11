@@ -31,11 +31,11 @@ namespace ComprobantesRetencion
             {
                 foreach (var item in oListaSolicitudTransfusionBE)
                 {
-                    //localhost.Service test = new localhost.Service();
+                    localhost.Service test = new localhost.Service();
                     int isApproved=0;
                     bool result;
 
-                    //test.checkStatus(item.idSolicitud, true, out isApproved, out result);
+                    test.checkStatus(item.codSolicitud, true, out isApproved, out result);
 
                     if (isApproved == 1)
                     {

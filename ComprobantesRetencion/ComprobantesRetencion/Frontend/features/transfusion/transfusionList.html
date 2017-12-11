@@ -1,0 +1,72 @@
+<article class="content forms-page">
+    <div class="subtitle-block">
+        <h3 class="subtitle"> Lista de Solicitud de Transfusión </h3>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Estado:</label>
+                    <%--<input id="cmbEstado" type=""  class="form-control" placeholder="-- Seleccione el estado--">--%>
+                        <select name="selectSt" class="form-control" id="cmbEstado" style="text-align-last:center;">
+                            <option value="0">--Seleccione el estado--</option>
+                            <option value="1">PENDIENTE DE ATENCION</option>
+                            <option value="2">PENDIENTE DE VISO</option>
+                            <option value="3">EN ATENCION</option>
+                        </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Fecha Inicio:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                                       <i class="fa fa-calendar"></i>
+                                       </span>
+                        <input id="txtfini" type="text" class="form-control" placeholder="Ingresar Fecha">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Fecha Fin:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                                       <i class="fa fa-calendar"></i>
+                                       </span>
+                        <input id="txtffin" type="text" class="form-control" placeholder="Ingresar Fecha">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-4">
+                <div class="form-group">
+                    <label class="control-label">&nbsp; </label>
+                    <button type="button" onclick="GetTransfusiones();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label class="control-label">&nbsp;</label>
+                    <button type="button" class="btn btn-warning btn-block" onclick="fnLimpiar();">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table id="tbTransfusiones" class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th class="center">Solicitud</th>
+                    <th class="center">Paciente</th>
+                    <th class="center">Estado</th>
+                    <th class="center">Fecha Envío</th>
+                    <th class="center">Fecha Fin Atención</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</article>

@@ -1,0 +1,129 @@
+<article class="content forms-page">
+    <div class="subtitle-block">
+        <h3 class="subtitle">Solicitud de Transfusión </h3>
+    </div>
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-12">
+                <div class="card card-block sameheight-item">
+                    <form class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Nro. Solicitud:</label>
+                                <input id="txtsoli" type="text" readonly="readonly" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Fecha Registro:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                    <input id="txtfechareg" type="text" class="form-control" placeholder="Ingresar Fecha" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Estado:</label>
+                                <input id="txtdesestado" type="text" readonly="readonly" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Motivo Transfusión</label>
+                                <textarea id="txtmotivo" rows="3" readonly="readonly" class="form-control boxed"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos del Paciente:</legend>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Paciente:</label>
+                                            <input id="txtpaciente" type="text" readonly="readonly" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Edad:</label>
+                                            <input id="txtedad" type="text" readonly="readonly" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Peso:</label>
+                                            <input id="txtpeso" type="text" readonly="readonly" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Sexo:</label>
+                                            <input id="txtsexo" type="text" readonly="readonly" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Nro. Historial Clínico:</label>
+                                            <input id="txtnrohistoriaclinica" type="text" readonly="readonly" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="control-label">Dolencias</label>
+                                                <textarea id="txtdolencias" rows="3" readonly="readonly" class="form-control boxed"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Hemocomponentes</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive" id="tbHemocomponentesSolicitud">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <br />
+                                            <button type="button" data-toggle="modal" id="btnConsultarBancos" class="btn btn-primary btn-block">Consultar Bancos Disponibles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Bancos Externos</legend>
+                                <div class="row">
+                                    <div id="listBancos"></div>
+                                    <button type="button" data-toggle="modal" id="btnOR" class="btn btn-primary btn-block">Generar orden externa</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group row pie-formulario">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-4">
+                                    <button id="btnRegresar" type="button" data-toggle="modal" data-target="#Regresar" class="btn btn-success btn-lg btn-block">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

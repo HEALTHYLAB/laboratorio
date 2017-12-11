@@ -1,0 +1,262 @@
+<article class="content forms-page">
+    <div class="subtitle-block">
+        <h3 class="subtitle">Solicitud de Transfusión </h3>
+    </div>
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-12">
+                <div class="card card-block sameheight-item">
+                    <form class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Nro. Solicitud:</label>
+                                <input id="txtsoli" type="text" readonly="readonly" class="form-control" value="" ng-model="solicitud.codigo">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Fecha Registro:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                    <input id="txtfecha" type="text" readonly="readonly" class="form-control" placeholder="Ingresar Fecha" ng-model="solicitud.fechaactual">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Estado:</label>
+                                <input id="txtestado" type="text" readonly="readonly" class="form-control" ng-model="solicitud.estado">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Motivo</label>
+                                <input id="txtobservaciones" type="text" class="form-control boxed" placeholder="Ingresar Motivo" ng-model="solicitud.motivo">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos del Paciente:</legend>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover">
+                                                <tbody id="tbPaciente">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class='chzn-container chzn-container-single chzn-container-active'> Paciente </label>
+                                            <div id="tablaPacienteDropDown">
+                                                <select class="form-control"
+                                                        ng-model="solicitud.paciente"
+                                                        ng-options="value.codpaciente as (value.nombres + ' - ' + value.nroDocumentoIdenidad) for (key, value) in pacientes">
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <button id="btnRegistraPacienteModal" type="button" data-toggle="modal" data-target="#agregar-paciente" class="btn btn-primary btn-block">Registrar Paciente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover">
+                                                <tbody id="tbTipoFactorRH">
+                                                    <tr>
+                                                        <td>
+                                                            <label class='control-label'> Factor RH </label>
+                                                        </td>
+                                                        <td>
+                                                            <select id='cboTipoFactorRH'
+                                                                    ng-model="solicitud.fatorRH"
+                                                                    ng-options="value.codigo as value.descripcion for (key, value) in factores">
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered table-hover">
+                                                <tbody id="tbTipoSangre">
+                                                    <tr>
+                                                        <td>
+                                                            <label class='control-label'> Tipo Sangre</label>
+                                                        </td>
+                                                        <td>
+                                                            <select id='cboTipoSangre'
+                                                                    ng-model="solicitud.tipoSangre"
+                                                                    ng-options="value.codigo as value.descripcion for (key, value) in tiposSange">
+                                                            </select>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Hemocomponentes</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table id="tbOrdenMedica" class='table table-striped table-bordered table-hover'>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Seleccionar</th>
+                                                        <th>Código</th>
+                                                        <th>Hemocomponente</th>
+                                                        <th>Unidades Requeridas</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="item in hemocomponentes">
+                                                        <td>
+                                                            <label>
+                                                                <input class='checkbox chkhemo' type='checkbox' datos='{{item.idHemocomponente + "|" + item.codigo + "|" + item.description}}'> <span>&nbsp;</span></label>
+                                                        </td>
+                                                        <td>{{item.codigo}}</td>
+                                                        <td>{{item.descripcion}}</td>
+                                                        <td>
+                                                            <div class='col-md-6'>
+                                                                <input type='text' class='form-control' ng-keypress="validNum($event)" value=''>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Asignación de Técnico</legend>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class='chzn-container chzn-container-single chzn-container-active'> Técnico </label>
+                                        <div id="Div2">
+                                            <asp:DropDownList data-placeholder="seleccionar técnico" runat="server" ID="cboTecnico" class="chzn-select" Style="width: 350px;">
+                                                <asp:ListItem Text="" Value=""></asp:ListItem>
+                                            </asp:DropDownList>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group row pie-formulario">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-4">
+                                    <button type="button" data-toggle="modal" data-target="#confirmar-guardar" class="btn btn-success btn-lg btn-block">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<div class="modal fade" id="agregar-paciente">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">Registrar Paciente</h4>
+            </div>
+            <div class="modal-body row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Nombres:</label>
+                                <input id="txtRegistroNombre" type="text" class="form-control" maxlength="100" ng-model="paciente.nombre">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Apellido Paterno:</label>
+                                <input id="txtRegistroApellidoPaterno" type="text" class="form-control" maxlength="100" ng-model="paciente.apellidoPat">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Apellido Materno:</label>
+                                <input id="txtRegistroApellidoMaterno" type="text" class="form-control" ng-model="paciente.apellidoMat">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Sexo:</label>
+                                <input type="radio" id="txtSexo1" name="txtSexo" value="H" checked="checked" ng-model="paciente.sexo" /> Hombre
+                                <input type="radio" id="txtSexo2" name="txtSexo" value="M" ng-model="paciente.sexo" /> Mujer
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Fecha Nacimiento:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <input id="txtRegistroFehaNacimiento" type="text" class="form-control" placeholder="Ingresar Fecha" ng-model="paciente.fechaNacimiento" data-date-picker>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class='control-label'>Tipo Documento:</label>
+                            <div class="form-group" id="tbComboTipoDocumemento">
+                                <select id='cboTipoDocumento' class="form-control" ng-model="paciente.tipoDoc">
+                                    <option value=''>--Seleccione--</option>
+                                    <option value='1'>DNI</option>
+                                    <option value='2'>Carnet de Extranjeria</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Código Documento:</label>
+                                <input id="txtRegistroCodigoDocumento" type="text" class="form-control" placeholder="Ingresar Código Documento" maxlength="20" ng-model="paciente.documento" ng-keypress="validNum($event)">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label class="control-label">&nbsp;</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive" id="tbHemocomponente">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnLimpiar" type="button" class="btn btn-warning pull-left" ng-click="limpiarPaciente()">Limpiar</button>
+                <button id="btnRegistrarPaciente" type="button" class="btn btn-success btn-lg" ng-click="agregarPaciente()" ng-disabled="pacienteBtnDisabled">AGREGAR</button>
+                <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

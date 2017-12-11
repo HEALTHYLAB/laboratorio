@@ -36,9 +36,9 @@ namespace ComprobantesRetencion
           string[] arreglo = xdata.Split('|');
       
              oSolicitudTransfusionBE.codSolicitud = Convert.ToInt32( arreglo[0]);
-             oSolicitudTransfusionBE.estado = Convert.ToInt32( arreglo[1]);
+             oSolicitudTransfusionBE.estadoInt = Convert.ToInt32( arreglo[1]);
              oSolicitudTransfusionBE.motivo =  arreglo[2];
-             oSolicitudTransfusionBE.codOrdenMedica = Convert.ToInt32( arreglo[3]);
+             oSolicitudTransfusionBE.codOrdenMedicaInt = Convert.ToInt32( arreglo[3]);
              oSolicitudTransfusionBE.codTecnico = Convert.ToInt32( arreglo[4]);
 
              string[] arreglodetalle = xdetalle.Split('-');

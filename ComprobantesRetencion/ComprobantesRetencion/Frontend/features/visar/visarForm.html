@@ -1,0 +1,154 @@
+<article class="content forms-page">
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-12">
+                <div class="card card-block sameheight-item">
+                    <form class="row">
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos de la Solicitud</legend>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Nro Solicitud:</label>
+                                            <input id="txtNroSolicitud" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="hdNroSolicitud" type="hidden" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Estado Solicitud:</label>
+                                            <input id="txtEstado" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="hdEstado" type="hidden" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <legend class="subtitulo">Datos de la Orden Médica</legend>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Nro Orden Médica:</label>
+                                            <input id="txtOrdenMedica" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="hdOrdenMedica" type="hidden" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Fecha Registro:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </span>
+                                                <input id="txtfecha" type="text" readonly="readonly" class="form-control" placeholder="Ingresar Fecha">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos del Paciente:</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Paciente:</label>
+                                            <input id="txtPaciente" type="text" readonly="readonly" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Fecha Nacimiento:</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </span>
+                                                <input id="txtFechaNacimiento" type="text" readonly="readonly" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Edad:</label>
+                                            <input id="txtEdad" type="text" readonly="readonly" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Peso:</label>
+                                            <input id="txtPeso" type="text" readonly="readonly" class="form-control" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Sexo:</label>
+                                            <input id="txtSexo" type="text" readonly="readonly" class="form-control" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos de la Transfusión</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Motivo:</label>
+                                            <input id="txtMotivo" type="text" readonly="readonly" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Médico:</label>
+                                            <input id="txtMedico" type="text" readonly="readonly" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Listado de Hemocomponentes</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table id="tbbodyHemo" class="table table-striped table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Código</th>
+                                                        <th>Descripción</th>
+                                                        <th>Globulos Rojos</th>
+                                                        <th>Cantidad</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group row pie-formulario">
+                                <div class="col-md-12"></div>
+                                <div class="col-md-2">
+                                    <button type="button" id="btnVisar" data-toggle="modal" data-target="#confirmar-visar" class="btn btn-success btn-lg btn-block">Visar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" id="btnRechazar" data-toggle="modal" data-target="#confirmar-rechazar" class="btn btn-success btn-lg btn-block">Rechazar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" id="btnRegresar" data-toggle="modal" data-target="#confirmar-regresar" class="btn btn-success btn-lg btn-block">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

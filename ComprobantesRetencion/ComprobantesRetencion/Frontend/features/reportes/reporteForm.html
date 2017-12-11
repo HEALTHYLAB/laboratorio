@@ -1,0 +1,86 @@
+<article class="content forms-page">
+    <div class="subtitle-block">
+        <h3 class="subtitle">Consulta de Resultado de Análisis Clínico </h3>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Paciente:</label>
+                    <select name="selectSt" class="form-control" id="cmbPaciente" style="text-align-last: center;">
+                        <option value="0">--Seleccione el Paciente--</option>
+                        <option value="2">Gerson Ocrospoma</option>
+                        <option value="95666">Luis Manuel Salcedo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Mes:</label>
+                    <select name="selectSt" class="form-control" id="cmbMes" style="text-align-last: center;">
+                        <option value="0">--Seleccione el mes--</option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Año:</label>
+                    <select name="selectSt" class="form-control" id="cmbAnio" style="text-align-last: center;">
+                        <option value="0">--Seleccione el año--</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-4">
+                <div class="form-group">
+                    <label class="control-label">&nbsp; </label>
+                    <button type="button" onclick="GetResultado();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label class="control-label">&nbsp;</label>
+                    <button type="button" class="btn btn-warning btn-block" onclick="fnLimpiar();">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table id="tbResultado" class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th class="center">Tipo de Análisis</th>
+                    <th class="center">Fecha de Emisión</th>
+                    <th class="center">Valor Óptimo</th>
+                    <th class="center">Resultado</th>
+                    <th class="center">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</article>

@@ -16,3 +16,12 @@ C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Negocios\bin\De
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Negocios\obj\Debug\Negocios.dll
 C:\Users\mvergaray\Downloads\TP3 Integrado\ComprobantesRetencion\Negocios\obj\Debug\Negocios.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\Negocios.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\Negocios.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\DAO.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\Entity.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\DAO.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\bin\Debug\Entity.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\obj\Debug\Negocios.dll
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\obj\Debug\Negocios.pdb
+C:\Users\mvergaray\git\laboratorio\ComprobantesRetencion\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache

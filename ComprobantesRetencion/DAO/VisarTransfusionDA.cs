@@ -54,7 +54,7 @@ namespace DAO
                     oSolicitudTransfusionBE.fechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5).ToUpper() : "");
                     oSolicitudTransfusionBE.fechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6).ToUpper() : "");
                     oSolicitudTransfusionBE.codEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
-                oSolicitudTransfusionBE.codOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
+                oSolicitudTransfusionBE.codOrdenMedicaInt = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
                 oSolicitudTransfusionBE.nroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9).ToUpper() : "");
                 oSolicitudTransfusionBE.peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10).ToUpper() : "");
                 oSolicitudTransfusionBE.nroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11).ToUpper() : "");
@@ -94,7 +94,7 @@ namespace DAO
                     reader.Read();
                     oSolicitudTransfusion.codSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
                     oSolicitudTransfusion.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
-                    oSolicitudTransfusion.codOrdenMedica = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0);
+                    oSolicitudTransfusion.codOrdenMedicaInt = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0);
                     oSolicitudTransfusion.nroOrdenMedica = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
                     oSolicitudTransfusion.motivo = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
                     oSolicitudTransfusion.estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");

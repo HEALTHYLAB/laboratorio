@@ -54,7 +54,7 @@ namespace DAO
                     oSolicitudTransfusionBE.fechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
                     oSolicitudTransfusionBE.fechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
                     oSolicitudTransfusionBE.codEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
-                    oSolicitudTransfusionBE.codOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
+                    oSolicitudTransfusionBE.codOrdenMedicaInt = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
                     oSolicitudTransfusionBE.nroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
                     oSolicitudTransfusionBE.peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
                     oSolicitudTransfusionBE.nroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
@@ -100,7 +100,7 @@ namespace DAO
                     oSolicitudTransfusionBE.fechaRegistro = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
                     oSolicitudTransfusionBE.fechaModificacion = ((!reader[6].Equals(DBNull.Value)) ? reader.GetString(6) : "");
                     oSolicitudTransfusionBE.codEstado = ((!reader[7].Equals(DBNull.Value)) ? reader.GetInt32(7).ToString() : "");
-                    oSolicitudTransfusionBE.codOrdenMedica = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
+                    oSolicitudTransfusionBE.codOrdenMedicaInt = ((!reader[8].Equals(DBNull.Value)) ? reader.GetInt32(8) : 0);
                     oSolicitudTransfusionBE.nroOrdenMedica = ((!reader[9].Equals(DBNull.Value)) ? reader.GetString(9) : "");
                     oSolicitudTransfusionBE.peso = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
                     oSolicitudTransfusionBE.nroHistoriaClinica = ((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
@@ -1193,6 +1193,39 @@ namespace DAO
             return lista;
         }
 
+        public List<PacienteBE> lstPacientes()
+        {
+            SqlCommand cmd = new SqlCommand("pr_GetListadoPacientes");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataReader reader = ExecuteReader(cmd, tipo_valor);
+            List<PacienteBE> lista = new List<PacienteBE>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    PacienteBE paciente = new PacienteBE();
+                    paciente.codPaciente = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
+                    paciente.codTipoDocumentoIdentidad = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(1) : 0);
+                    paciente.nroDocumentoIdenidad = ((!reader[0].Equals(DBNull.Value)) ? reader.GetString(2) : "");
+                    paciente.fechaNacimiento = DateTime.Parse((!reader[0].Equals(DBNull.Value)) ? reader.GetString(3) : "");
+                    paciente.nombres = (!reader[0].Equals(DBNull.Value)) ? reader.GetString(4) : "";
+                    paciente.apellidoPaterno = (!reader[0].Equals(DBNull.Value)) ? reader.GetString(5) : "";
+                    paciente.apellidoMaterno = (!reader[0].Equals(DBNull.Value)) ? reader.GetString(6) : "";
+                    paciente.sexo = (!reader[0].Equals(DBNull.Value)) ? reader.GetString(7) : "";
+                    
+                    lista.Add(paciente);
+                }
+                reader.Close();
+
+                return lista;
+            }
+            else
+            {
+                lista = null;
+            }
+            return lista;
+        }
 
     }
 

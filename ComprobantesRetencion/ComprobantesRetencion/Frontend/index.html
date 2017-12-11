@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es" ng-app="labApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sistema de Gestión de Laboratorios y Banco de Sangre </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+</head>
+
+<body ng-controller="GeneralCtrl">
+    <div class="main-wrapper">
+        <div class="app" id="app">
+            <aside class="sidebar">
+                <div class="sidebar-container">
+                    <div class="sidebar-header">
+                        <div class="brand">Clínica Ricardo Palma</div>
+                    </div>
+                    <nav class="menu">
+                        <ul class="nav metismenu" id="sidebar-menu">
+                            <li><a href="/Frontend/index.html#/">
+                                <i class="fa fa-th-large"></i>Generar Solicitud de Transfusión de Emergencia
+                            </a>
+                            </li>
+                            <li><a href="/Frontend/index.html#/transfusion">
+                                <i class="fa fa-table"></i>Transfusiones
+                            </a>
+                            </li>
+                            <li><a href="/Frontend/index.html#/visar">
+                                <i class="fa fa-table"></i>Visar Solicitud
+                            </a>
+                            </li>
+                            <li><a href="/Frontend/index.html#/externa">
+                                <i class="fa fa-table"></i>Actualizar Solicitud de Transfusión Externa
+                            </a>
+                            </li>
+                            <li><a href="/Frontend/index.html#/reportes">
+                                <i class="fa fa-table"></i>Reportes
+                            </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <footer class="sidebar-footer">
+                    <ul class="nav metismenu" id="customize-menu">
+                        <li>
+                            <ul>
+                                <li class="customize">
+                                    <div class="customize-item">
+                                        <div class="row customize-header">
+                                            <div class="col-xs-4"></div>
+                                            <div class="col-xs-4">
+                                                <label class="title">Fijo</label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label class="title">Estático</label>
+                                            </div>
+                                        </div>
+                                        <div class="row hidden-md-down">
+                                            <div class="col-xs-4">
+                                                <label class="title">Menu:</label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label>
+                                                    <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label>
+                                                    <input class="radio" type="radio" name="sidebarPosition" value="">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <label class="title">Cabecera:</label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label>
+                                                    <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label>
+                                                    <input class="radio" type="radio" name="headerPosition" value="">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="">
+                                <i class="fa fa-cog"></i>Configuración
+                        </a>
+                        </li>
+                    </ul>
+                </footer>
+            </aside>
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+            <div ng-view></div>
+            <div class="modal fade" id="agregar-om">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">Consulta Técnico Disponibles</h4>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <div class="col-md-12">
+                                <div class="table-responsive" id="tbOrdenMedica">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btnahemo" type="button" class="btn btn-success btn-lg">AGREGAR</button>
+                            <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="agregar-tecnico">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">Consulta Técnico Disponibles</h4>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <div class="col-md-12">
+                                <div class="table-responsive" id="tbTecnico">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnatecnico" class="btn btn-success btn-lg">AGREGAR</button>
+                            <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="confirmar-guardar">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title"><i class="fa fa-warning"></i>Confirmación</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esta Seguro de Guardar los Cambios?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btnGuardar" type="button" class="btn btn-primary" data-dismiss="modal">Si estoy Seguro</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="alert">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title"><i class="fa fa-warning"></i>Alerta</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="txttexto"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ref" id="ref">
+        <div class="color-primary"></div>
+        <div class="chart">
+            <div class="color-primary"></div>
+            <div class="color-secondary"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-cookies/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-strap/dist/angular-strap.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script type="text/javascript" src="vendor/adapt-strap/dist/adapt-strap.min.js"></script>
+    <script type="text/javascript" src="vendor/adapt-strap/dist/adapt-strap.tpl.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-select/dist/select.min.js"></script>
+    <script type="text/javascript" src="vendor/moment/min/moment-with-locales.min.js"></script>
+    <script src="core/app.js"></script>
+    <script src="core/directives.js"></script>
+    <script src="features/routes.js"></script>
+    <script src="features/general/generalCtrl.js"></script>
+    <script src="features/emergencia/emergenciaCtrl.js"></script>
+    <script src="features/transfusion/transfusionCtrl.js"></script>
+    <script src="features/visar/visarCtrl.js"></script>
+    <script src="features/externa/externaCtrl.js"></script>
+    <script src="features/reportes/reporteCtrl.js"></script>
+    <script src="features/emergencia/emergenciaSvc.js"></script>
+</body>
+
+</html>

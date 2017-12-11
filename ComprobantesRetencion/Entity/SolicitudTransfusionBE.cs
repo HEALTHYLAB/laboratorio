@@ -34,9 +34,9 @@ namespace Entity
         public string paciente { get; set; }
         public string sexo { get; set; }
         public int codSolicitud { get; set; }
-        public int estado { get; set; }
+        public int estadoInt { get; set; }
         public string motivo { get; set; }
-        public int codOrdenMedica { get; set; }
+        public int codOrdenMedicaInt { get; set; }
         public int codTecnico { get; set; }
         public List<DetalleSolicitudTranfusion> oListaDetalleSolicitudTranfusion { get; set; }
         public int codTipoFactorRH { get; set; }

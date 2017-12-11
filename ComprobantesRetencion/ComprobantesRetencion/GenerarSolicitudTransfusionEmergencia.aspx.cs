@@ -53,18 +53,13 @@ namespace ComprobantesRetencion
             oPaciente.nombres = arreglo[0];
             oPaciente.apellidoPaterno = arreglo[1];
             oPaciente.apellidoMaterno = arreglo[2];
-
-            if(arreglo[3]!=null) {
-            oPaciente.sexo = arreglo[3];           
-            } else {
-            oPaciente.sexo = arreglo[4];              
-            }
+            oPaciente.sexo = arreglo[3];
             
-            DateTime fechaNacimientoDate = DateTime.ParseExact(arreglo[5], "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime fechaNacimientoDate = DateTime.ParseExact(arreglo[4], "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             oPaciente.fechaNacimiento = fechaNacimientoDate;
 
-            oPaciente.codTipoDocumentoIdentidad = Convert.ToInt32(arreglo[6]);
-            oPaciente.nroDocumentoIdenidad = arreglo[7];
+            oPaciente.codTipoDocumentoIdentidad = Convert.ToInt32(arreglo[5]);
+            oPaciente.nroDocumentoIdenidad = arreglo[6];
 
             string xValor = "";
             xValor = new TransfusionBL().insRegistroPaciente(oPaciente);
@@ -91,7 +86,7 @@ namespace ComprobantesRetencion
             string[] arreglo = xdata.Split('|');
 
             oSolicitudTransfusionBE.codSolicitud = Convert.ToInt32(arreglo[0]);
-            oSolicitudTransfusionBE.estado = 1;//REGISTRADO
+            oSolicitudTransfusionBE.estadoInt = 1;//REGISTRADO
             oSolicitudTransfusionBE.motivo = arreglo[1];
             oSolicitudTransfusionBE.codTecnico = Convert.ToInt32(arreglo[2]);
             oSolicitudTransfusionBE.codPaciente = arreglo[3];
