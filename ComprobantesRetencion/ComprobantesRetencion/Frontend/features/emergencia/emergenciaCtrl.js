@@ -4,52 +4,15 @@
       '$scope',
       'EmergenciaSvc',
       function($scope, EmergenciaSvc) {
-        $scope.solicitud = {};
-        $scope.hemocomponentes = [];
-        $scope.factores = [];
-        $scope.tiposSangre = [];
-        $scope.paciente = {};
-        $scope.pacienteBtnDisabled = false;
 
-        function creartablaHemocomponente(oListaHemocomponenteBE) {
-          var html = "";
-          html = "<table  class='table table-striped table-bordered table-hover'><thead>   <tr> <th>Seleccionar</th><th>Código</th><th>Hemocomponente</th><th>Unidades Requeridas</th></tr> </thead><tbody>";
-          for (i = 0; i < oListaHemocomponenteBE.length; i++) {
-
-            html += "<tr><td> <label> <input class='checkbox chkhemo' type='checkbox'";
-            html += "datos='" + oListaHemocomponenteBE[i].IdHemocomponente + "|" + oListaHemocomponenteBE[i].Codigo + "|" + oListaHemocomponenteBE[i].Descripcion + "'> <span>&nbsp;</span></label></td>";
-            html += "<td>" + oListaHemocomponenteBE[i].Codigo + "</td>";
-            html += "<td>" + oListaHemocomponenteBE[i].Descripcion + "</td>";
-            html += "<td><div class='col-md-6'><input  type='text' class='form-control' onkeypress='return ValidNum(event);' value=''></div></td></tr>";
-          }
-          html += "</tbody></table>";
-          document.getElementById("tbOrdenMedica").innerHTML = html;
-        }
-
-        function creartablaFactorRH(oListaFactorRH) {
-          var html = "";
-          html = "<table  class='table table-striped table-bordered table-hover'><tbody>";
-          html += "<tr><td> <label class='control-label'> Factor RH </td>";
-          html += "<td> <select id='cboTipoFactorRH'>";
-          for (i = 0; i < oListaFactorRH.length; i++) {
-            html += "<option value='" + oListaFactorRH[i].Codigo + "  ' " + " >" + oListaFactorRH[i].Descripcion + "</option>";
-          }
-          html += "</td></tr>";
-          html += "</tbody></table>";
-          document.getElementById("tbTipoFactorRH").innerHTML = html;
-        }
-
-        function creartablaTipoSangre(oListaTipoSangre) {
-          var html = "";
-          html = "<table  class='table table-striped table-bordered table-hover'><tbody>";
-          html += "<tr><td> <label class='control-label'> Tipo Sangre </td>";
-          html += "<td> <select id='cboTipoSangre'>";
-          for (i = 0; i < oListaTipoSangre.length; i++) {
-            html += "<option value='" + oListaTipoSangre[i].Codigo + "  ' " + " >" + oListaTipoSangre[i].Descripcion + "</option>";
-          }
-          html += "</td></tr>";
-          html += "</tbody></table>";
-          document.getElementById("tbTipoSangre").innerHTML = html;
+        function restart() {
+          $scope.solicitud = {};
+          $scope.hemocomponentes = [];
+          $scope.factores = [];
+          $scope.tiposSangre = [];
+          $scope.tecnicos = [];
+          $scope.paciente = {};
+          $scope.pacienteBtnDisabled = false;
         }
 
 
@@ -69,6 +32,7 @@
               $scope.factores = data.d.oListaFactorRH;
               $scope.tiposSangre = data.d.oListaTipoSangre
               $scope.pacientes = data.d.oListaPaciente;
+              $scope.tecnicos = data.d.oListaTecnicoBE;
               $scope.solicitud.codigo = data.d.codigo;
               $scope.solicitud.estado = "REGISTRADO"
               $scope.solicitud.fechaactual = moment().format('DD/MM/YYYY');
@@ -131,14 +95,12 @@
           $scope.pacienteBtnDisabled = true;
           EmergenciaSvc.savePaciente(data).then(
             function(data) {
-              debugger
               if (data.d != null) {
                 alerta("EL paciente ha sido guardado de forma correcta en la base de datos");
                 listData();
-                document.getElementById('tablaPacienteDropDown').onload;
-                document.getElementById('cboPaciente').onload;
-                $("#agregar-paciente").modal('hide');
+                angular.element("#agregar-paciente").modal('toggle');
               }
+              $scope.limpiarPaciente()
               $scope.pacienteBtnDisabled = false;
             },
             function(error) {
@@ -147,7 +109,87 @@
               $scope.pacienteBtnDisabled = false;
             });
         }
+        $scope.hemocompSeleccionados = [];
+        $scope.validateUser = function() {
+          var errorHemocomp = false;
 
+          $scope.hemocompSeleccionados = [];
+          if (!$scope.solicitud.motivo) {
+            alerta("Ingrese el motivo de la solicitud.");
+            return;
+          }
+          if (!_.get($scope, 'solicitud.paciente')) {
+            alerta("Seleccionar paciente.");
+            return;
+          }
+          if (!_.get($scope, 'solicitud.factorRH')) {
+            alerta('Seleccionar un factor RH.');
+            return;
+          }
+          if (!_.get($scope, 'solicitud.tipoSangre')) {
+            alerta('Seleccionar un tipo de sangre.');
+            return;
+          }
+          if (!_.get($scope, 'solicitud.tecnico')) {
+            alerta('Seleccionar un técnico.');
+            return;
+          }
+
+          _.forEach($scope.hemocomponentes, function(item) {
+            if (item.selected && !item.cantidad) {
+              errorHemocomp = true;
+              return;
+            }
+            if (item.selected && item.cantidad) {
+              $scope.hemocompSeleccionados.push(item);
+            }
+          });
+
+          if (!$scope.hemocompSeleccionados.length) {
+            alerta('Seleccione al menos un hemocomponente.');
+            return;
+          }
+          if (errorHemocomp) {
+            alerta('Ingrese la cantidad en los hemocomponentes seleccionados.');
+            return;
+          }
+
+          angular.element('#confirmar-guardar').modal('toggle');
+        };
+
+        $scope.registrarSolicitud = function() {
+          var data = $scope.solicitud.codigo + "|" + $scope.solicitud.motivo + "|" + $scope.solicitud.tecnico
+            + "|" + $scope.solicitud.paciente + "|" + $scope.solicitud.factorRH + "|" + $scope.solicitud.tipoSangre;
+
+          var detalle = "",  num = 0, split, splitDet, m = 0;
+          $(".chkhemo").each(function () {
+              if ($(this).is(":checked") == true) {
+                  objDetalle = {};
+                  var texto = $(this).parent().parent().parent().find(":input[type=text]").val();
+                  splitDet = this.getAttribute('datos').split('|');// + "," + texto;
+                  num++;
+                  detalle += splitDet[0] + "|" + texto + "-";
+              }
+          });
+
+          var xdetalle = detalle.substr(0, detalle.length - 1);
+
+          EmergenciaSvc.saveSolicitud(data, xdetalle).then(
+            function(data) {
+              if (data.d != null) {
+                alerta("La solicitud de transfusion fue guardada de forma correcta en la base de datos");
+                restart();
+                listData();
+              }
+            },
+            function(error) {
+              console.log(error);
+              alert("Ocurrió un error en el servidor.");
+              $scope.pacienteBtnDisabled = false;
+            });
+        };
+
+        restart();
         listData();
       }
     ]);

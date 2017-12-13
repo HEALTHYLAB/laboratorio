@@ -52,8 +52,8 @@
                                             <div id="tablaPacienteDropDown">
                                                 <select class="form-control"
                                                         ng-model="solicitud.paciente"
-                                                        ng-options="value.codpaciente as (value.nombres + ' - ' + value.nroDocumentoIdenidad) for (key, value) in pacientes">
-
+                                                        ng-options="value.codPaciente as (value.nombres + ' - ' + value.nroDocumentoIdenidad) for (key, value) in pacientes">
+                                                    <option value=''>Seleccionar paciente</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -64,6 +64,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <br/>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="table-responsive">
@@ -74,9 +75,8 @@
                                                             <label class='control-label'> Factor RH </label>
                                                         </td>
                                                         <td>
-                                                            <select id='cboTipoFactorRH'
-                                                                    ng-model="solicitud.fatorRH"
-                                                                    ng-options="value.codigo as value.descripcion for (key, value) in factores">
+                                                            <select id='cboTipoFactorRH' ng-model="solicitud.factorRH" ng-options="value.codigo as value.descripcion for (key, value) in factores">
+                                                                <option value="">--</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -95,7 +95,8 @@
                                                         <td>
                                                             <select id='cboTipoSangre'
                                                                     ng-model="solicitud.tipoSangre"
-                                                                    ng-options="value.codigo as value.descripcion for (key, value) in tiposSange">
+                                                                    ng-options="value.codigo as value.descripcion for (key, value) in tiposSangre">
+                                                                <option value="">--</option>
                                                             </select>
                                                     </tr>
                                                 </tbody>
@@ -124,13 +125,18 @@
                                                     <tr ng-repeat="item in hemocomponentes">
                                                         <td>
                                                             <label>
-                                                                <input class='checkbox chkhemo' type='checkbox' datos='{{item.idHemocomponente + "|" + item.codigo + "|" + item.description}}'> <span>&nbsp;</span></label>
+                                                                <input class='chkhemo'
+                                                                        type='checkbox'
+                                                                        datos='{{item.codHemocomponente + "|" + item.codigo + "|" + item.descripcion}}'
+                                                                        ng-model='item.selected'>
+                                                                        <span>&nbsp;</span>
+                                                            </label>
                                                         </td>
                                                         <td>{{item.codigo}}</td>
                                                         <td>{{item.descripcion}}</td>
                                                         <td>
                                                             <div class='col-md-6'>
-                                                                <input type='text' class='form-control' ng-keypress="validNum($event)" value=''>
+                                                                <input type='text' class='form-control' ng-keypress="validNum($event)" ng-model='item.cantidad'>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -147,12 +153,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class='chzn-container chzn-container-single chzn-container-active'> Técnico </label>
-                                        <div id="Div2">
-                                            <asp:DropDownList data-placeholder="seleccionar técnico" runat="server" ID="cboTecnico" class="chzn-select" Style="width: 350px;">
-                                                <asp:ListItem Text="" Value=""></asp:ListItem>
-                                            </asp:DropDownList>
-                                            </form>
-                                        </div>
+                                        <select class="form-control" ng-model="solicitud.tecnico" ng-options="value.codTecnico as value.nombre for (key, value) in tecnicos">
+                                            <option value="">Seleccionar Técnico</option>
+                                        </select>
                                     </div>
                                 </div>
                             </fieldset>
@@ -161,7 +164,9 @@
                             <div class="form-group row pie-formulario">
                                 <div class="col-md-8"></div>
                                 <div class="col-md-4">
-                                    <button type="button" data-toggle="modal" data-target="#confirmar-guardar" class="btn btn-success btn-lg btn-block">Guardar</button>
+                                    <button type="button"
+                                            class="btn btn-success btn-lg btn-block"
+                                            ng-click='validateUser()'>Guardar</button>
                                 </div>
                             </div>
                         </div>
@@ -256,6 +261,26 @@
                 <button id="btnLimpiar" type="button" class="btn btn-warning pull-left" ng-click="limpiarPaciente()">Limpiar</button>
                 <button id="btnRegistrarPaciente" type="button" class="btn btn-success btn-lg" ng-click="agregarPaciente()" ng-disabled="pacienteBtnDisabled">AGREGAR</button>
                 <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="confirmar-guardar">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"><i class="fa fa-warning"></i>Confirmación</h4>
+            </div>
+            <div class="modal-body">
+                <p>Esta Seguro de Guardar los Cambios?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnGuardar" type="button" class="btn btn-primary" data-dismiss="modal"
+                        ng-click="registrarSolicitud()">Si estoy Seguro</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
             </div>
         </div>
     </div>
