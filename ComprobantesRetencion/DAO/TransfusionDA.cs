@@ -398,7 +398,7 @@ namespace DAO
                 paramsToStore[0] = new SqlParameter("@idSolicitud", SqlDbType.Int);
                 paramsToStore[0].Value = oTransfusionBE.codSolicitud;
                 paramsToStore[1] = new SqlParameter("@estado", SqlDbType.Int);
-                paramsToStore[1].Value = oTransfusionBE.estado;
+                paramsToStore[1].Value = oTransfusionBE.estadoInt;
                 paramsToStore[2] = new SqlParameter("@motivo", SqlDbType.VarChar, 4000);
                 paramsToStore[2].Value = oTransfusionBE.motivo;
                 //paramsToStore[3] = new SqlParameter("@idOrdenMedica", SqlDbType.Int);
@@ -1056,7 +1056,7 @@ namespace DAO
             paramsToStore[1] = new SqlParameter("@Estado", SqlDbType.Int);
             paramsToStore[1].Value = estado;
 
-            using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "pr_Update_Sol_ext", paramsToStore))
+            using (SqlDataReader reader = SqlHelper.ExecuteReader(GetConexion(), CommandType.StoredProcedure, "pr_UpdateSol_ext", paramsToStore))
             {
 
             }

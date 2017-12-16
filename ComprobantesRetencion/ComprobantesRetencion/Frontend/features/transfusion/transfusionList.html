@@ -7,13 +7,12 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Estado:</label>
-                    <%--<input id="cmbEstado" type=""  class="form-control" placeholder="-- Seleccione el estado--">--%>
-                        <select name="selectSt" class="form-control" id="cmbEstado" style="text-align-last:center;">
-                            <option value="0">--Seleccione el estado--</option>
-                            <option value="1">PENDIENTE DE ATENCION</option>
-                            <option value="2">PENDIENTE DE VISO</option>
-                            <option value="3">EN ATENCION</option>
-                        </select>
+                    <select name="selectSt" class="form-control" id="cmbEstado" style="text-align-last:center;" ng-model="busqueda.estado">
+                        <option value="">--Seleccione el estado--</option>
+                        <option value="1">PENDIENTE DE ATENCION</option>
+                        <option value="2">PENDIENTE DE VISO</option>
+                        <option value="3">EN ATENCION</option>
+                    </select>
                 </div>
             </div>
             <div class="col-md-4">
@@ -21,9 +20,9 @@
                     <label class="control-label">Fecha Inicio:</label>
                     <div class="input-group">
                         <span class="input-group-addon">
-                                       <i class="fa fa-calendar"></i>
-                                       </span>
-                        <input id="txtfini" type="text" class="form-control" placeholder="Ingresar Fecha">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                        <input id="txtfini" type="text" class="form-control" placeholder="Ingresar Fecha" ng-model="busqueda.fechaInicio" data-date-picker>
                     </div>
                 </div>
             </div>
@@ -32,9 +31,9 @@
                     <label class="control-label">Fecha Fin:</label>
                     <div class="input-group">
                         <span class="input-group-addon">
-                                       <i class="fa fa-calendar"></i>
-                                       </span>
-                        <input id="txtffin" type="text" class="form-control" placeholder="Ingresar Fecha">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                        <input id="txtffin" type="text" class="form-control" placeholder="Ingresar Fecha" ng-model="busqueda.fechaFin" data-date-picker>
                     </div>
                 </div>
             </div>
@@ -43,13 +42,13 @@
             <div class="col-md-2 offset-md-4">
                 <div class="form-group">
                     <label class="control-label">&nbsp; </label>
-                    <button type="button" onclick="GetTransfusiones();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                    <button type="button" ng-click="buscar();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <label class="control-label">&nbsp;</label>
-                    <button type="button" class="btn btn-warning btn-block" onclick="fnLimpiar();">Limpiar</button>
+                    <button type="button" class="btn btn-warning btn-block" ng-click="limpiar();">Limpiar</button>
                 </div>
             </div>
         </div>
@@ -66,6 +65,16 @@
                 </tr>
             </thead>
             <tbody>
+                <tr ng-repeat="item in solicitudes">
+                    <td>{{item.nroSolicitud}}</td>
+                    <td>{{item.paciente}}</td>
+                    <td>{{item.desEstado}}</td>
+                    <td>{{item.fechaRegistro}}</td>
+                    <td>{{item.fechaModificacion}}</td>
+                    <td>
+                        <div class='btn-group btn-group-sm'><button type='button' class='btn btn-oval btn-success' ng-click='atender(item.codSolicitud)'> Atender</button></div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

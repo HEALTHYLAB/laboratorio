@@ -18,15 +18,18 @@ namespace ComprobantesRetencion
         }
 
         [WebMethod]
+        // Obtener listado de solicitud de transfusiones
         public static List<SolicitudTransfusionBE> lstSolicitudTransfusion(string xData)
         {
+            // Obtener parámetros de búsqueda
             string[] arreglo = xData.Split('|');
 
             List<SolicitudTransfusionBE> oListaSolicitudTransfusionBE = new List<SolicitudTransfusionBE>();
 
-            
+            // Consultar business layer
             oListaSolicitudTransfusionBE = new TransfusionBL().lstTranfusionesExtByParameters(arreglo[0], arreglo[1], Convert.ToInt32(arreglo[2]));
 
+            // Si el estado es 3, obtener estado desde Web Service
             if (arreglo[2] == "3")
             {
                 foreach (var item in oListaSolicitudTransfusionBE)
@@ -37,6 +40,7 @@ namespace ComprobantesRetencion
 
                     test.checkStatus(item.codSolicitud, true, out isApproved, out result);
 
+                    // Evaluar estado devuelto por Web Service
                     if (isApproved == 1)
                     {
                         item.desEstado = "Aprobado";

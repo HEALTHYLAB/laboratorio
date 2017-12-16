@@ -1,71 +1,178 @@
 <article class="content forms-page">
     <div class="subtitle-block">
-        <h3 class="subtitle"> Lista de Solicitud de Transfusión Externa </h3>
+        <h3 class="subtitle">Solicitud de Transfusión </h3>
     </div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="control-label">Estado:</label>
-                    <%--<input id="cmbEstado" type=""  class="form-control" placeholder="-- Seleccione el estado--">--%>
-                        <select name="selectSt" class="form-control" id="cmbEstado" style="text-align-last:center;">
-                            <option value="0">--Seleccione el estado--</option>
-                            <option value="1">PENDIENTE DE ATENCIÓN</option>
-                            <option value="3">EN ATENCIÓN</option>
-                        </select>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="control-label">Fecha Inicio:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                                       <i class="fa fa-calendar"></i>
-                                       </span>
-                        <input id="txtfini" type="text" class="form-control" placeholder="Ingresar Fecha">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="control-label">Fecha Fin:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                                       <i class="fa fa-calendar"></i>
-                                       </span>
-                        <input id="txtffin" type="text" class="form-control" placeholder="Ingresar Fecha">
-                    </div>
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-12">
+                <div class="card card-block sameheight-item">
+                    <form class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Nro. Solicitud:</label>
+                                <input id="txtsoli" type="text" readonly="readonly" class="form-control"
+                                ng-model="solicitud.nroSolicitud">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Fecha Registro:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                    <input id="txtfechareg" type="text" class="form-control" placeholder="Ingresar Fecha" readonly="readonly" ng-model="solicitud.fechaRegistro">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Estado:</label>
+                                <input id="txtdesestado" type="text" readonly="readonly" class="form-control" ng-model="solicitud.estado">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Motivo Transfusión</label>
+                                <textarea id="txtmotivo" rows="3" readonly="readonly" class="form-control boxed" ng-model="solicitud.motivo"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Datos del Paciente:</legend>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Paciente:</label>
+                                            <input id="txtpaciente" type="text" readonly="readonly" class="form-control" ng-model="solicitud.paciente">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Edad:</label>
+                                            <input id="txtedad" type="text" readonly="readonly" class="form-control" ng-model="solicitud.edad">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Peso:</label>
+                                            <input id="txtpeso" type="text" readonly="readonly" class="form-control" ng-model="solicitud.peso">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Sexo:</label>
+                                            <input id="txtsexo" type="text" readonly="readonly" class="form-control" ng-model="solicitud.sexo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Nro. Historial Clínico:</label>
+                                            <input id="txtnrohistoriaclinica" type="text" readonly="readonly" class="form-control" ng-model="solicitud.nroHistoriaClinica">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="control-label">Dolencias</label>
+                                                <textarea id="txtdolencias" rows="3" readonly="readonly" class="form-control boxed" ng-model="solicitud.dolencia"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Hemocomponentes</legend>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive" id="tbHemocomponentesSolicitud">
+                                            <table  class='table table-striped table-bordered table-hover'>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nro</th>
+                                                        <th>Hemocomponente</th>
+                                                        <th>Cantidad Requerida</th>
+                                                        <th>Unidades Compatibles</th>
+                                                        <th>NroSolicitud</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="item in hemocomponentes">
+                                                        <td>{{item.numero}}</td>
+                                                        <td>{{item.hemocomponente}}</td>
+                                                        <td>{{item.cantidadRequerida}}</td>
+                                                        <td>{{item.nroSolicitud}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <br />
+                                            <button type="button" id="btnConsultarBancos" class="btn btn-primary btn-block"
+                                            ng-click="buscarBancos()">Consultar Bancos Disponibles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset class="form-group">
+                                <legend class="subtitulo">Bancos Externos</legend>
+                                <div class="row">
+                                    <div id="listBancos">
+                                        <select ng-if="bancos && bancos.length" multiple ng-options="value.codigo as value.descripcion for (key, value) in bancos" ng-model="solicitud.bancos">
+
+                                        </select>
+                                        <div ng-if="!bancos || !bancos.length">
+                                            Consulte los bancos disponibles
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-block"
+                                    ng-click="atender()">Atender</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group row pie-formulario">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-4">
+                                    <button id="btnRegresar" type="button" data-toggle="modal" data-target="#Regresar" class="btn btn-success btn-lg btn-block">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2 offset-md-4">
-                <div class="form-group">
-                    <label class="control-label">&nbsp; </label>
-                    <button type="button" onclick="GetTransfusiones();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label class="control-label">&nbsp;</label>
-                    <button type="button" class="btn btn-warning btn-block" onclick="fnLimpiar();">Limpiar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <table id="tbTransfusiones" class="table table-striped table-hover table-bordered">
-            <thead>
-                <tr>
-                    <th class="center">Solicitud</th>
-                    <th class="center">Paciente</th>
-                    <th class="center">Estado</th>
-                    <th class="center">Fecha Envío</th>
-                    <th class="center">Fecha Fin Atención</th>
-                </tr>
-            </thead>
-            <tbody id="tbTransfusionesBody">
-            </tbody>
-        </table>
-    </div>
+    </section>
 </article>
+<div class="modal fade" id="confirmar-atender">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"><i class="fa fa-warning"></i>Confirmación</h4>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro que desea actualizar la solicitud?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnGuardar" type="button" class="btn btn-primary" data-dismiss="modal"
+                        ng-click="atenderSolicitud()">Sí estoy seguro</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

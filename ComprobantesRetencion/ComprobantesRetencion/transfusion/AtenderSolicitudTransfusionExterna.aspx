@@ -73,7 +73,7 @@
                 $.ajax({
                     type: "POST",
                     async: false,
-                    url: "/transfusion/AtenderSolicitudTransfusionExterna.aspx/insOrdenRequerimiento",
+                    url: "/transfusion/AtenderSolicitudTransfusionExterna.aspx/actualizarSolicitudExterna",
                     data: "{idSolicitudExterna:'" + idSolicitud + "', idBancosSt: '" + selectedValues + "', idHemocompSt:'"+hemocomponentes+"', cantSt:'"+cantidadHemocomponentes+"'}",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -110,7 +110,7 @@
                 $.ajax({
                     type: "POST",
                     async: false,
-                    url: "/transfusion/AtenderSolicitudTransfusion.aspx/insOrdenRequerimiento",                    
+                    url: "/transfusion/AtenderSolicitudTransfusion.aspx/actualizarSolicitudExterna",
                     data: "{xdetalle:'" + xdetalle + "'}",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -194,28 +194,6 @@
                         document.getElementById("txtsexo").value = response.d.Sexo;
                         document.getElementById("txtnrohistoriaclinica").value = response.d.NroHistoriaClinica;
                         document.getElementById("txtdolencias").value = response.d.Dolencia;
-
-                        creartablaHemocomponenteSolicitud(response.d.oListaHemocomponenteSolicitudBE);
-                    }
-                },
-                error: function (error) { alert("Error al cargar Solicitud error: " + error); }
-            });
-        }
-
-        function ConsultaCompatibilidad() {
-
-            var xdata = "1" + "|" + document.getElementById("cboTipoSangre").value + "|" + document.getElementById("cboFactorRH").value + "|" + document.getElementById("txtAlbumina").value + "|" + document.getElementById("txtHemoglobina").value + "|" + document.getElementById("txtLeucocitos").value + "|" + document.getElementById("txtPlaquetas").value
-
-            $.ajax({
-                type: "POST",
-                async: false,
-                url: "AtenderSolicitudTransfusionExterna.aspx/GetQueryCompatibilidadHemocomponentes",
-                data: "{xData:'" + xdata + "'}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (response) {
-                    debugger;
-                    if (response.d != null) {
 
                         creartablaHemocomponenteSolicitud(response.d.oListaHemocomponenteSolicitudBE);
                     }

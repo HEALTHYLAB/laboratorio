@@ -17,11 +17,14 @@ namespace ComprobantesRetencion
 
             DatosClinicaBE oDatosClinicaBE = new DatosClinicaBE();
 
+            // Obtener valores por defecto de solicitud de emergencia
             oDatosClinicaBE = new TransfusionBL().lstDatosEmergencia();
             int contador = 0;
+            // Obtener lista de pacientes
             foreach(var x in oDatosClinicaBE.oListaPaciente) {
                 cboPaciente.Items.Insert(contador, new ListItem(x.nroDocumentoIdenidad + " " + x.nombres + " " + x.apellidoPaterno + " " + x.apellidoMaterno, x.codPaciente + ""));
             }
+            // Obtener listado de técnicos
             foreach (var x in oDatosClinicaBE.oListaTecnicoBE)
             {
                 cboTecnico.Items.Insert(contador, new ListItem(x.nombre , x.codTecnico + ""));
@@ -31,22 +34,20 @@ namespace ComprobantesRetencion
 
       
         [WebMethod]
+        // Obtener listado de solicitudes de emergencia
         public static DatosClinicaBE lstDatosEmergencia()
         {
             DatosClinicaBE oDatosClinicaBE = new DatosClinicaBE();
 
            oDatosClinicaBE = new TransfusionBL().lstDatosEmergencia();
-
-           //lblSelectedValue.Text = cboCountry.SelectedValue;
-
-           //cboCountry.DataSource = "sexo";
-           //cboCountry.Items.Insert(2, "sexo");
             return oDatosClinicaBE;
         }
 
         [WebMethod]
+        // Guardar nuevo paciente
         public static string insRegistrarPaciente(string xdata)
         {
+            // Obtener parámetros
             string[] arreglo = xdata.Split('|');
             PacienteBE oPaciente = new PacienteBE();
 
@@ -62,11 +63,13 @@ namespace ComprobantesRetencion
             oPaciente.nroDocumentoIdenidad = arreglo[6];
 
             string xValor = "";
+            // Guardar datos
             xValor = new TransfusionBL().insRegistroPaciente(oPaciente);
             return xValor;
         }
 
         [WebMethod]
+        // Obtener listado de orden médica
         public static List<OrdenMedicaBE> lstOrden(string xData)
         {
              string[] arreglo =  xData.Split('|');
@@ -79,6 +82,7 @@ namespace ComprobantesRetencion
 
 
         [WebMethod]
+        // Guardar datos de solicitud de transfusión de emergencia
         public static string insTransfucionEmergencia(string xdata, string xdetalle)
         {
             SolicitudTransfusionBE oSolicitudTransfusionBE = new SolicitudTransfusionBE();
@@ -107,7 +111,6 @@ namespace ComprobantesRetencion
 
             oSolicitudTransfusionBE.oListaDetalleSolicitudTranfusion = oListaDetalleSolicitudTranfusion;
             string xValor = "";
-            //oSolicitudTransfusionBE.oListaDetalleSolicitudTranfusion = oListaDetalleSolicitudTranfusion;
             new TransfusionBL().insTransfucionEmergencia(oSolicitudTransfusionBE);
             return xValor;
         }

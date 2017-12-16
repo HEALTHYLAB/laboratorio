@@ -91,20 +91,28 @@ namespace DAO
                 //{
                 if (reader != null)
                 {
-                    reader.Read();
+                    reader.Read(); 
+                    
                     oSolicitudTransfusion.codSolicitud = ((!reader[0].Equals(DBNull.Value)) ? reader.GetInt32(0) : 0);
                     oSolicitudTransfusion.nroSolicitud = ((!reader[1].Equals(DBNull.Value)) ? reader.GetString(1) : "");
                     oSolicitudTransfusion.codOrdenMedicaInt = ((!reader[2].Equals(DBNull.Value)) ? reader.GetInt32(2) : 0);
                     oSolicitudTransfusion.nroOrdenMedica = ((!reader[3].Equals(DBNull.Value)) ? reader.GetString(3) : "");
                     oSolicitudTransfusion.motivo = ((!reader[4].Equals(DBNull.Value)) ? reader.GetString(4) : "");
                     oSolicitudTransfusion.estado = ((!reader[5].Equals(DBNull.Value)) ? reader.GetString(5) : "");
-                    if (!reader[6].Equals(DBNull.Value)) oSolicitudTransfusion.fechaRegistro = reader.GetDateTime(6).ToString("dd/MM/yyyy");
+                    if (!reader[6].Equals(DBNull.Value))
+                    {
+                        oSolicitudTransfusion.fechaRegistro = reader.GetDateTime(6).ToString("dd/MM/yyyy");
+                    }
                     oSolicitudTransfusion.paciente = ((!reader[7].Equals(DBNull.Value)) ? reader.GetString(7).ToUpper() : "");
                     oSolicitudTransfusion.sexo = ((!reader[8].Equals(DBNull.Value)) ? reader.GetString(8) : "");
-                    if (!reader[9].Equals(DBNull.Value)) oSolicitudTransfusion.nacimiento = reader.GetDateTime(9).ToString("dd/MM/yyyy");
-                    oSolicitudTransfusion.edad = ((!reader[10].Equals(DBNull.Value)) ? reader[10].ToString() : "");
-                    oSolicitudTransfusion.peso = ((!reader[11].Equals(DBNull.Value)) ? reader[11].ToString() : "");
-                    oSolicitudTransfusion.medico = ((!reader[12].Equals(DBNull.Value)) ? reader[12].ToString().ToUpper() : "");
+                    if (!reader[9].Equals(DBNull.Value))
+                    {
+                        oSolicitudTransfusion.nacimiento = reader.GetDateTime(9).ToString("dd/MM/yyyy");
+                    }
+                    oSolicitudTransfusion.edad = ((!reader[10].Equals(DBNull.Value)) ? reader.GetString(10) : "");
+                    
+                    oSolicitudTransfusion.medico = !reader[12].Equals(DBNull.Value) ? reader.GetString(12).ToUpper() : "";
+                    oSolicitudTransfusion.peso = !reader[11].Equals(DBNull.Value) ? reader.GetInt32(11).ToString() : "0";//((!reader[11].Equals(DBNull.Value)) ? reader.GetString(11) : "");
                 }
                 reader.Close();
 

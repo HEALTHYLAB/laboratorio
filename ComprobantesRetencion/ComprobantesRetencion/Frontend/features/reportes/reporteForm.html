@@ -7,8 +7,9 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Paciente:</label>
-                    <select name="selectSt" class="form-control" id="cmbPaciente" style="text-align-last: center;">
-                        <option value="0">--Seleccione el Paciente--</option>
+                    <select name="selectSt" class="form-control" id="cmbPaciente" style="text-align-last: center;"
+                    ng-model="busqueda.paciente">
+                        <option value="">--Seleccione el Paciente--</option>
                         <option value="2">Gerson Ocrospoma</option>
                         <option value="95666">Luis Manuel Salcedo</option>
                     </select>
@@ -17,8 +18,9 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Mes:</label>
-                    <select name="selectSt" class="form-control" id="cmbMes" style="text-align-last: center;">
-                        <option value="0">--Seleccione el mes--</option>
+                    <select name="selectSt" class="form-control" id="cmbMes" style="text-align-last: center;"
+                    ng-model="busqueda.month">
+                        <option value="">--Seleccione el mes--</option>
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -37,8 +39,9 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label">Año:</label>
-                    <select name="selectSt" class="form-control" id="cmbAnio" style="text-align-last: center;">
-                        <option value="0">--Seleccione el año--</option>
+                    <select name="selectSt" class="form-control" id="cmbAnio" style="text-align-last: center;"
+                    ng-model="busqueda.year">
+                        <option value="">--Seleccione el año--</option>
                         <option value="2010">2010</option>
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
@@ -47,8 +50,6 @@
                         <option value="2015">2015</option>
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
                     </select>
                 </div>
             </div>
@@ -57,13 +58,13 @@
             <div class="col-md-2 offset-md-4">
                 <div class="form-group">
                     <label class="control-label">&nbsp; </label>
-                    <button type="button" onclick="GetResultado();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                    <button type="button" ng-click="buscar();" class="btn btn-primary btn-block "><i class="fa fa-search"></i>&nbsp;Buscar</button>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <label class="control-label">&nbsp;</label>
-                    <button type="button" class="btn btn-warning btn-block" onclick="fnLimpiar();">Limpiar</button>
+                    <button type="button" class="btn btn-warning btn-block" ng-click="limpiar();">Limpiar</button>
                 </div>
             </div>
         </div>
@@ -80,7 +81,100 @@
                 </tr>
             </thead>
             <tbody>
+                <tr ng-repeat="item in analisis">
+                    <td>{{item.tipoAnalisis}}</td>
+                    <td>{{item.fechaEmision}}</td>
+                    <td>{{item.valorOptimo}}</td>
+                    <td>{{item.resultado}}</td>
+                    <td>
+                        <div class='btn-group btn-group-sm'>
+                            <button type='button' class='btn btn-oval btn-success' ng-click='modalDetalle(item.codResultadoAC)'> Ver Detalle</button>
+                            <button type='button' class='btn btn-oval btn-danger' ng-click='modalReporte(item.codTipoAnalisis, item.codPaciente)'> Estadística</button>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
 </article>
+
+<div class="modal fade" id="detalle-analisis">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Detalle Análisis Clínico</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Tipo de Análisis: </label>
+                                <label class="control-label col-md-6 py-2" id="tipo_analisis_result" style="font-weight: 100;" > {{analisisSelec.tipoAnalisis}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Fecha de Emisión: </label>
+                                <label class="control-label col-md-6 py-2" id="fecha_emision_result" style="font-weight: 100;">{{analisisSelec.fechaEmision}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Valor óptimo: </label>
+                                <label class="control-label col-md-6 py-2" id="valor_optimo_result" style="font-weight: 100;">{{analisisSelec.valorOptimo}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Resultado: </label>
+                                <label class="control-label col-md-6 py-2" id="resultado_result" style="font-weight: 100;">{{analisisSelec.resultado}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Médico Solicitante: </label>
+                                <label class="control-label col-md-6 py-2" id="medico_solicitante_result" style="font-weight: 100;">{{analisisSelec.medicoSolicitante}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label col-md-6 py-2" style="text-align: center;">Fecha de Solicitud: </label>
+                                <label class="control-label col-md-6 py-2" id="fecha_solicitud_result" style="font-weight: 100;">{{analisisSelec.fechaSolicitud}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="reporte-analisis">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Reporte Análisis Clinico</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 style ="text-align:left">Tipo de Análisis: Glucosa</h4>
+                    <canvas id="myChart" width="400" height="200"></canvas>
+                    <input type="hidden" id="valorMinimo"/>
+                    <input type="hidden" id="valorMaximo"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>

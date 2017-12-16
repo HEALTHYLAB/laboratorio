@@ -110,8 +110,8 @@
                                     $("<td />").text(val[i].MotivoTransfusion).appendTo(row);
                                     $("<td />").text(val[i].FechaRegistro).appendTo(row);
 
-                                    if (val[i].IdEstado == "2") {
-                                        $("<div class='btn-group btn-group-sm'><button type='button' class='btn btn-oval btn-success' onclick='fnAtender(" + val[i].idSolicitud + ")'> Visar</button></div>").appendTo(row);
+                                    if (val[i].codEstado == "2") {
+                                        $("<div class='btn-group btn-group-sm'><button type='button' class='btn btn-oval btn-success' onclick='fnAtender(" + val[i].codSolicitud + ")'> Visar</button></div>").appendTo(row);
                                     } 
                                     $(row).appendTo("#tbTransfusiones");
                                 }

@@ -17,17 +17,7 @@ namespace ComprobantesRetencion.transfusion
 
         }
 
-        //public JsonResult GetAllContacts()
-        //{
-        //    var user = GetLoggedInUserID();
-        //    var contacts = _contactService.GetUserContacts(user).Select(x => new
-        //    {
-        //        Id = x.Id,
-        //        Name = x.Name,
-        //        MobileNumber = x.MobileNumber
-        //    }).ToList(); // <--- cast to list if GetUserContacts returns an IEnumerable
-        //    return Json(contacts, JsonRequestBehavior.AllowGet);
-        //}
+
         [WebMethod]
         public static List<SolicitudTransfusionBE> lstSolicitudTransfusion(string xData)
         {

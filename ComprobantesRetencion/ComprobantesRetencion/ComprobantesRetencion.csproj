@@ -183,6 +183,7 @@
     <Content Include="Frontend\features\transfusion\transfusionCtrl.js" />
     <Content Include="Frontend\features\transfusion\transfusionForm.html" />
     <Content Include="Frontend\features\transfusion\transfusionList.html" />
+    <Content Include="Frontend\features\transfusion\transfusionSvc.js" />
     <Content Include="Frontend\features\visar\visarCtrl.js" />
     <Content Include="Frontend\features\visar\visarForm.html" />
     <Content Include="Frontend\features\visar\visarList.html" />

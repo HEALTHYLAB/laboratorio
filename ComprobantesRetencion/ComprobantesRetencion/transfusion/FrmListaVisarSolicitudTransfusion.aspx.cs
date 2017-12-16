@@ -17,24 +17,15 @@ namespace ComprobantesRetencion.transfusion
 
         }
 
-        //public JsonResult GetAllContacts()
-        //{
-        //    var user = GetLoggedInUserID();
-        //    var contacts = _contactService.GetUserContacts(user).Select(x => new
-        //    {
-        //        Id = x.Id,
-        //        Name = x.Name,
-        //        MobileNumber = x.MobileNumber
-        //    }).ToList(); // <--- cast to list if GetUserContacts returns an IEnumerable
-        //    return Json(contacts, JsonRequestBehavior.AllowGet);
-        //}
         [WebMethod]
+        // Obtener listado de solicitud de transfusiones
         public static List<SolicitudTransfusionBE> lstSolicitudTransfusion(string xData)
         {
-
+            // Obtener parámetros de búsqueda
             string[] arreglo = xData.Split('|');
 
             List<SolicitudTransfusionBE> oListaSolicitudTransfusionBE = new List<SolicitudTransfusionBE>();
+            // Consultar business layer
             oListaSolicitudTransfusionBE = new VisarTransfusionBL().lstTranfusionesByParameters(arreglo[0], arreglo[1], Convert.ToInt32(arreglo[2]));
             return oListaSolicitudTransfusionBE;
         }

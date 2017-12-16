@@ -11,15 +11,14 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="control-label">Nro Solicitud:</label>
-                                            <input id="txtNroSolicitud" type="text" readonly="readonly" class="form-control" value="">
-                                            <input id="hdNroSolicitud" type="hidden" value="">
+                                            <input id="txtNroSolicitud" type="text" readonly="readonly" class="form-control" ng-model="solicitud.nroSolicitud">
+                                            <input id="hdNroSolicitud" type="hidden" ng-model="solicitud.hdNroSolicitud">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="control-label">Estado Solicitud:</label>
-                                            <input id="txtEstado" type="text" readonly="readonly" class="form-control" value="">
-                                            <input id="hdEstado" type="hidden" value="">
+                                            <input id="txtEstado" type="text" readonly="readonly" class="form-control" ng-model="solicitud.estado">
                                         </div>
                                     </div>
                                 </div>
@@ -28,8 +27,8 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="control-label">Nro Orden Médica:</label>
-                                            <input id="txtOrdenMedica" type="text" readonly="readonly" class="form-control" value="">
-                                            <input id="hdOrdenMedica" type="hidden" value="">
+                                            <input id="txtOrdenMedica" type="text" readonly="readonly" class="form-control" ng-model="solicitud.nroOrdenMedica">
+                                            <input id="hdOrdenMedica" type="hidden" ng-model="solicitud.hdOrdenMedica">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -39,7 +38,7 @@
                                                 <span class="input-group-addon">
                                                                 <i class="fa fa-calendar"></i>
                                                             </span>
-                                                <input id="txtfecha" type="text" readonly="readonly" class="form-control" placeholder="Ingresar Fecha">
+                                                <input id="txtfecha" type="text" readonly="readonly" class="form-control" placeholder="Ingresar Fecha" ng-model="solicitud.fecha">
                                             </div>
                                         </div>
                                     </div>
@@ -53,7 +52,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Paciente:</label>
-                                            <input id="txtPaciente" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="txtPaciente" type="text" readonly="readonly" class="form-control" ng-model="solicitud.paciente">
                                         </div>
                                     </div>
                                 </div>
@@ -65,26 +64,26 @@
                                                 <span class="input-group-addon">
                                                                 <i class="fa fa-calendar"></i>
                                                             </span>
-                                                <input id="txtFechaNacimiento" type="text" readonly="readonly" class="form-control" placeholder="">
+                                                <input id="txtFechaNacimiento" type="text" readonly="readonly" class="form-control" placeholder="" ng-model="solicitud.fechaNacimiento">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="control-label">Edad:</label>
-                                            <input id="txtEdad" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="txtEdad" type="text" readonly="readonly" class="form-control" ng-model="solicitud.edad">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="control-label">Peso:</label>
-                                            <input id="txtPeso" type="text" readonly="readonly" class="form-control" value="" />
+                                            <input id="txtPeso" type="text" readonly="readonly" class="form-control" ng-model="solicitud.peso"/>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="control-label">Sexo:</label>
-                                            <input id="txtSexo" type="text" readonly="readonly" class="form-control" value="" />
+                                            <input id="txtSexo" type="text" readonly="readonly" class="form-control" ng-model="solicitud.sexo"/>
                                         </div>
                                     </div>
                                 </div>
@@ -97,13 +96,13 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Motivo:</label>
-                                            <input id="txtMotivo" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="txtMotivo" type="text" readonly="readonly" class="form-control" ng-model="solicitud.motivo">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="control-label">Médico:</label>
-                                            <input id="txtMedico" type="text" readonly="readonly" class="form-control" value="">
+                                            <input id="txtMedico" type="text" readonly="readonly" class="form-control" ng-model="solicitud.medico">
                                         </div>
                                     </div>
                                 </div>
@@ -125,6 +124,12 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    <tr ng-repeat="item in hemocomponentes">
+                                                        <td>{{item.codigo}}</td>
+                                                        <td>{{item.descripcion}}</td>
+                                                        <td>{{item.globulosRojos}}</td>
+                                                        <td>{{item.cantidadRequerida}}</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -136,13 +141,14 @@
                             <div class="form-group row pie-formulario">
                                 <div class="col-md-12"></div>
                                 <div class="col-md-2">
-                                    <button type="button" id="btnVisar" data-toggle="modal" data-target="#confirmar-visar" class="btn btn-success btn-lg btn-block">Visar</button>
+                                    <button type="button" id="btnVisar" class="btn btn-success btn-lg btn-block" ng-click="visar()">Visar</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="button" id="btnRechazar" data-toggle="modal" data-target="#confirmar-rechazar" class="btn btn-success btn-lg btn-block">Rechazar</button>
+                                    <button type="button" id="btnRechazar" ng-click="rechazar()" class="btn btn-success btn-lg btn-block">Rechazar</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="button" id="btnRegresar" data-toggle="modal" data-target="#confirmar-regresar" class="btn btn-success btn-lg btn-block">Regresar</button>
+                                    <button type="button" id="btnRegresar" class="btn btn-success btn-lg btn-block"
+                                    ng-click="regresar()">Regresar</button>
                                 </div>
                             </div>
                         </div>
@@ -152,3 +158,23 @@
         </div>
     </section>
 </article>
+<div class="modal fade" id="confirmar-visar">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"><i class="fa fa-warning"></i>Confirmación</h4>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro de guardar los cambios?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnGuardar" type="button" class="btn btn-primary" data-dismiss="modal"
+                        ng-click="visarSolicitud()">Sí estoy seguro</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

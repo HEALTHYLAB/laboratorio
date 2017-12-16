@@ -19,58 +19,22 @@ namespace ComprobantesRetencion.transfusion
         }
 
         [WebMethod]
+        // Obtienes los datos de la solicitud de transfusión externa
         public static SolicitudTransfusionBE GetDatosSolicitudTransfusionExt(string xData)
         {
+            // Obtener parámetros de búsqueda
             string[] arreglo = xData.Split('|');
+            // Obtener id de solicitud
             int IdSolicitud = Convert.ToInt32(arreglo[0]);
 
             TransfusionBL oTransfusionBL = new TransfusionBL();
 
+            // Obtener datos de la solicitud de tranfusión externa por id de solicitud
             return oTransfusionBL.GetDatosSolicitudTransfusionExt(IdSolicitud);
         }
 
         [WebMethod]
-        public static SolicitudTransfusionBE GetQueryCompatibilidadHemocomponentes(string xData)
-        {
-            string[] arreglo = xData.Split('|');
-
-            int IdSolicitud = Convert.ToInt32(arreglo[0]);
-            int IdTipoSangre = Convert.ToInt32(arreglo[1]);
-            int FactorRH = Convert.ToInt32(arreglo[2]);
-
-            TransfusionBL oTransfusionBL = new TransfusionBL();
-            return oTransfusionBL.GetQueryCompatibilidadHemocomponentes(IdSolicitud, IdTipoSangre, FactorRH);
-        }
-
-        [WebMethod]
-        public static string insTransfucion(string xdata, string xdetalle)
-        {
-
-            string[] arreglo = xdata.Split('|');
-            string[] arregloDetalle = xdetalle.Split('-');
-
-
-            OrdenDonacionBE o = new OrdenDonacionBE();
-            o.estado = 2;//PENDIENTE
-            o.observacion = arreglo[0];
-
-            List<HemocomponenteSolicitudBE> obj = new List<HemocomponenteSolicitudBE>();
-            for (int i = 0; i < arregloDetalle.Length; i++)
-            {
-                HemocomponenteSolicitudBE hemoObjt = new HemocomponenteSolicitudBE();
-                string[] arreglo2 = arregloDetalle[i].Split('|');
-                hemoObjt.codHemocomponente = arreglo2[0];
-                hemoObjt.codSolicitud = "1";//TODO
-                obj.Add(hemoObjt);
-            }
-
-            string xValor = "";
-            new TransfusionBL().insOrndeDonacion(o, obj);
-            return xValor;
-        }
-
-
-        [WebMethod]
+        // Obtener listado de bancos externos con los hemocomponentes requeridos disponibles
         public static List<BancoBE> getBancosExternos(string ids, string cantidad)
         {
             List<BancoBE> listBancos = new List<BancoBE>();
@@ -79,26 +43,32 @@ namespace ComprobantesRetencion.transfusion
 
             string[] idsHemocomp = ids.Split(',');
             string[] cantHemocomp = cantidad.Split(',');
+            // Obtener id de hemocomponentes solicitados
             for (int i = 0; i < idsHemocomp.Length; i++)
             {
                 idsHemocompInt[i] = Int16.Parse(idsHemocomp[i]);
             }
+            // Obtener listado de bancos externos con los hemocomponentes requeridos disponibles
+            // a través de Web Service
             localhost.Service test = new localhost.Service();
             idsBancos = test.GetData(idsHemocompInt, cantHemocomp);
 
-
+            // Obtener bancos por id
             TransfusionBL oTransfusionBL = new TransfusionBL();
             listBancos = oTransfusionBL.getListBancosxId(idsBancos.ToList());
             return listBancos;
         }
 
         [WebMethod]
-        public static string insOrdenRequerimiento(int idSolicitudExterna, string idBancosSt, string idHemocompSt, string cantSt)
+        // Actualizar estado de solicitud externa
+        public static string actualizarSolicitudExterna(int idSolicitudExterna, string idBancosSt, string idHemocompSt, string cantSt)
         {
+            // Obtener parámetros
             string[] idBancos = idBancosSt.Split(',');
             string[] idHemocomp = idHemocompSt.Split(',');
             string[] cantidad = cantSt.Split(',');
 
+            // Consultar Web Service
             localhost.Service test = new localhost.Service();
             string nroOrdenExterna = test.receiveOrder(1, true, idSolicitudExterna, true, idHemocomp, cantidad);
 

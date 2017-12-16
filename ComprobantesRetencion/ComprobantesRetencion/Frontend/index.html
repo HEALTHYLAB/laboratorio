@@ -30,7 +30,7 @@
                                 <i class="fa fa-th-large"></i>Generar Solicitud de Transfusión de Emergencia
                             </a>
                             </li>
-                            <li><a href="/Frontend/index.html#/transfusion">
+                            <li ng-if="false"><a href="/Frontend/index.html#/transfusion">
                                 <i class="fa fa-table"></i>Transfusiones
                             </a>
                             </li>
@@ -134,7 +134,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="modal fade" id="agregar-tecnico">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -204,6 +203,9 @@
     <script type="text/javascript" src="vendor/angular-ui-select/dist/select.min.js"></script>
     <script type="text/javascript" src="vendor/moment/min/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="vendor/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/chartjs/Chart.js/master/samples/utils.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/chartjs/chartjs-plugin-annotation/master/chartjs-plugin-annotation.js"></script>
     <script src="core/app.js"></script>
     <script src="core/directives.js"></script>
     <script src="features/routes.js"></script>
@@ -214,6 +216,10 @@
     <script src="features/externa/externaCtrl.js"></script>
     <script src="features/reportes/reporteCtrl.js"></script>
     <script src="features/emergencia/emergenciaSvc.js"></script>
+    <script src="features/transfusion/transfusionSvc.js"></script>
+    <script src="features/visar/visarSvc.js"></script>
+    <script src="features/externa/externaSvc.js"></script>
+    <script src="features/reportes/reporteSvc.js"></script>
 </body>
 
 </html>
